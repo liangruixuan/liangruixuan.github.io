@@ -1,0 +1,196 @@
+	<style type="text/css">body {
+				margin: 0;
+			}
+			
+			html {
+				line-height: 1.5;
+			}
+			
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				margin: 0;
+			}
+			header {
+				background-image: url(../img/banner.jpg);
+				background-size: cover;
+				height: 525px;
+			}
+			nav.top ul li {
+				float: left;
+				line-height: 54px;/*行高*/
+				color: white;
+				padding-top: 4px;
+			}
+			nav.top ul li a {
+				margin: 0 15px;
+				color: white;
+				text-decoration: none; 文本装饰线
+			}
+			nav.top ul li:after {
+				/*li:after 伪元素选择器*/
+				content: '/';
+			}
+			nav.top ul li:last-of-type:after{
+				content: '';
+			}
+			header nav.top ul li:first-of-type a {
+				color: yellow;
+				border-top: 4px solid yellow;
+			}
+			nav.top ul li a:hover{
+				color:yellow;
+				border-top: 4px solid yellow;
+			}
+			nav.top form{
+				position:relative;
+			}
+			nav.top form input{
+				background: transparent;
+				border: 1px solid white;
+				color: white;
+				padding: 5px 10px;
+				margin-right: 20px;
+				margin-top: 10px;
+				float: right;
+			}
+			nav.top form input[type=submit]{
+				background: url(../img/search.png) no-repeat;
+				/*padding: 0;*/
+				width: 22px;
+				height: 22px;
+				background-position: center;
+				border: none;
+				position: absolute;
+				right: 4px;
+				bottom:-35px;
+				cursor: pointer;
+			}
+			header nav {
+				background: rgba(0, 0, 0, 0.4);
+				width: 1140px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			/*.card1{
+					background-image: url(../img/icon4.png);
+					background-repeat: no-repeat ;
+				}*/
+			
+			header h1{
+				text-align: center;
+				border-top: 2px solid white;
+				border-bottom: 2px solid white;
+				font-style: italic;
+				font-size: 50px;
+				width: 280px;
+				margin: 40px auto;
+				text-decoration: none;
+			}
+			h1{
+	color: #394c5;
+	font-size: 35px;
+	text-align: center;
+}
+h1{
+	color: #394c5;
+	font-size: 35px;
+	text-align: center;
+}
+.bigbox .tu{
+	width: 1140px;
+	height: 200px;
+	background: gainsboro;
+	transition: all .5s; 
+}
+.bigbox .tu:hover{
+	width: 1140px;
+	height: 200px;
+	background: ghostwhite;
+}
+.bigbox{
+	width: 1140px;
+	margin: 0 auto;
+	/*background: black;*/
+}
+.bigbox .top{
+	width: 1140px;
+	overflow: hidden;
+	margin: 0 auto;
+	/*background: white;*/
+}
+.bigbox .top .card{
+	width: 360px;
+	float: left;
+	margin: 0 10px;
+	
+	/*background: white;*/
+}
+.bigbox .top .card h3{
+	margin: 10px 0;
+	
+	/*background: white;*/
+}
+.bigbox .top .card input{
+	width: 340px;
+	border: gainsboro;
+	padding: 10px;
+	border: 1px solid gainsboro;
+	transition: all .5s;
+	/*background: white;*/
+}
+.bigbox .top .card input:hover{
+	border: 1px solid darkorange;
+	
+	/*background: white;*/
+}
+.foot textarea{
+	padding: 10px;
+	width: 100%;
+	min-height: 200px;
+	resize: none;
+	margin: 0 10px;
+	transition: all .5s;
+	border-color: gainsboro;
+}
+.foot textarea:hover{
+	border: 1px solid darkorange;
+}
+.foot h3{
+	padding: 10px;
+	margin: 0;
+}
+.foot {
+	width: 1094px;
+	/*margin: 0 10px;*/
+}
+input[type="submit"]{
+	background: forestgreen;
+	border: none;
+	margin: 10px 10px;
+	padding: 8px 30px;
+	font-size: 15px;
+	font-family: "微软雅黑";
+	cursor: pointer;
+	color: white;
+	transition: all .5s;
+}
+input[type="submit"]:hover{
+	background: orange;
+	/*border: none;
+	margin: 10px 10px;
+	padding: 8px 30px;
+	font-size: 15px;
+	font-family: "微软雅黑";
+	cursor: pointer;
+	color: white;*/
+}

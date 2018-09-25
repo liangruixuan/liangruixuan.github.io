@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div class="background">
+                <div id="quan">
+                    <img src="images/turntable.png" alt="">
+                </div>
+                <div id="point">
+                    <img src="images/pointer.png" alt="">
+                </div>
+            </div>
+            <script>
+                var quan=document.getElementById("quan");
+                var point=document.getElementById("point");
+
+                var dengji=function(){
+                    var shuzi=Math.floor(Math.random()*100);
+                    if(shuzi<1){
+                        return{
+                            code:1,
+                            text:"特等奖"
+                        };
+                    }else if(shuzi<10){
+                        return{
+                            code:2,
+                            text:"一等奖"
+                        };
+                    }else if(shuzi<20){
+                        return{
+                            code:3,
+                            text:"二等奖"
+                        };
+                    }else if(shuzi<30){
+                        return{
+                            code:4,
+                            text:"三等奖"
+                        };
+                    }else if(shuzi<40){
+                        return{
+                            code:5,
+                            text:"四等奖"
+                        };
+                    }else if(shuzi<50){
+                        return{
+                            code:6,
+                            text:"五等奖"
+                        };
+                    }else{
+                        return{
+                            code:7,
+                            text:"谢谢参与"
+                        };
+                    }
+                }
+                var canClick=true;
+                point.onclick =function(){
+                    if(canClick ==true){
+                        canClick=false;
+                        quan.style.transition = 'all 3s';
+                            var x=dengji();
+                            console.log(x,canClick);
+                            var du=27+(x.code-1)*(360/7);
+                            quan.style.transform='rotate('+(du+360*3)+'deg)';
+                            setTimeout(function(){
+                                canClick=true;
+                                quan.style.transition='all 0s';
+                                quan.style.transform='rotate('+du+'deg)';
+                                alert(x.text);
+                            },3000);
+
+                        }
+
+
+                }
+            </script>
+</body>
+<style>
+        .background{
+            background: url(images/turntable-bg.jpg);
+            width:650px;
+            height: 600px  ;
+            margin: 0 auto;
+            position: relative;
+        }
+        .background #quan{
+            width: 450px;
+            height: 450px;
+            position: absolute;
+            top:60px;
+            left: 118px;
+            transition: all 3s;
+        }
+        .background #point{
+            position: absolute;
+            top:155px;
+            left: 251px;
+        }
+    </style>
+</html>

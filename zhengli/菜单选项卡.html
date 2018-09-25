@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="tab-content">
+    <div class="tab-controls">
+        <li class="active xxx">London</li>
+        <li class="xxx">Paris</li>
+        <li class="xxx">Tokyo</li>
+        <li class="xxx">Oslo</li>
+    </div>
+    <div class="tab-items">
+        <li class="active">London is the capital city of England.</li>
+        <li>Paris is the capital of France.</li>
+        <li>Tokyo is the capital of Japan.</li>
+        <li>Oslo is the capital of Norway.</li>
+    </div>
+</div>
+<style>
+    body {
+        margin: 0;
+        background: lightblue;
+    }
+    li {
+        list-style: none;
+    }
+    .tab-content {
+        width: 400px;
+        margin: 0 auto;
+        color: white;
+    }
+    .tab-content .tab-controls li {
+        width: 25%;
+        float: left;
+        line-height: 50px;
+        text-align: center;
+        background: orange;
+    }
+    .tab-content .tab-controls li.active {
+        background: lightgreen;
+    }
+    .tab-content .tab-items li {
+        text-align: center;
+        line-height: 100px;
+        display: none;
+    }
+    .tab-content .tab-items li.active {
+        background: lightgreen;
+        display: block;
+    }
+</style>
+<script>
+    var tabControls = document.querySelectorAll('.tab-content .tab-controls li');
+    var tabItems = document.querySelectorAll('.tab-content .tab-items li');
+
+    // 查找某个元素的兄弟元素的函数
+    var siblings = function (ele) {
+        var nodes = [];
+        var allNodes = ele.parentNode.children;
+        for (var i = 0; i < allNodes.length; i++) {
+            if (allNodes[i] !== ele) {
+                nodes.push(allNodes[i]);
+            }
+        }
+        return nodes;
+    };
+
+    // 某个元素增加某个class的函数
+    var addClass = function (element, className) {
+        var oldClass = element.className;
+        var classArray = oldClass.split(' ');
+        if (classArray.indexOf(className) === -1) {
+            classArray.push(className);
+        }
+        element.className = classArray.join(' ').trim();
+    };
+
+    // 某个元素删除某个class的函数
+    var removeClass = function (element, className) {
+        var oldClass = element.className;
+        var classArray = oldClass.split(' ');
+        if (classArray.indexOf(className) !== -1) {
+            classArray.splice(classArray.indexOf(className), 1);
+        }
+        // classArray.splice(classArray.indexOf(className), 1);
+
+        if (classArray.length === 0) {
+            element.removeAttribute('class');
+        } else {
+            element.className = classArray.join(' ').trim();
+        }
+    };
+
+    for (var i = 0; i < tabControls.length; i++) {
+        tabControls[i].index = i;
+        tabControls[i].onclick = function () {
+            // tab-controls 高亮
+            // this.className = 'active';
+            addClass(this,'active');
+
+            // 同辈取消高亮
+            var otherTabControls = siblings(this);
+            for (var j = 0; j < otherTabControls.length; j++) {
+                removeClass(otherTabControls[j], 'active');
+            }
+
+            // tab-items 激活
+            // tabItems[this.index].className = 'active';
+            addClass(tabItems[this.index],'active');
+
+            // 同辈取消高亮
+            var otherTabItems = siblings(tabItems[this.index]);
+            for (var h = 0; h < otherTabItems.length; h++) {
+                removeClass(otherTabItems[h], 'active');
+            }
+        }
+    }
+</script>
+</body>
+</html>

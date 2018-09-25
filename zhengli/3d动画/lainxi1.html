@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="box">
+			
+		</div>
+		<div class="card">
+			<div class="he qian">qian</div>
+			<div class="he hou">hou</div>
+			<div class="he left">left</div>
+			<div class="he right">right</div>
+			<div class="he top">top</div>
+			<div class="he bottom">bottom</div>
+		</div>
+	</body>
+	<style type="text/css">
+		@keyframes zhuan{
+			0%{transform: rotateX(0deg) rotateY(0deg)}
+			50%{transform: rotateX(360deg) rotateY(0deg);}
+			100%{transform: rotateX(360deg) rotateY(360deg);}
+		}
+		body{
+			perspective: 500px;
+			perspective-origin: 50% 75%
+		}
+		.card{
+			position: relative;
+			width: 100px;
+			height: 100px;
+			margin: 0 auto;
+			transform-style: preserve-3d;
+			animation: zhuan 4s infinite ease-in-out;
+			transform-origin: 50% 50%;
+			/*transform: rotateX(-30deg) rotateY(30deg);*/
+		}
+		.card .he{
+			position: absolute;
+			top:0px
+			left: 0;
+			/*transform: rotateX(-30deg) rotateY(30deg);*/
+			text-align: center;
+			line-height: 100px;
+			font-size: 20px;
+			color: white;
+			font-weight: bold;
+			width: 100px;
+			height: 100px;
+			background-color: lightblue;
+			transform-origin: 50% 50%;
+		}
+		.card .he.qian{
+			transform: translateZ(80px);
+			background-color: red;
+		}
+		.card .he.hou{
+			transform: translateZ(-80px)rotateY(180deg);
+			background-color: cornflowerblue;
+		}
+		.card .he.left{
+			transform: translateX(-80px) rotateY(-90deg);
+			background-color: green;
+		}
+		.card .he.right{
+			background-color: yellow;
+			transform: translateX(80px) rotateY(90deg);
+		}
+		.card .he.top{
+			background-color: orange;
+			transform: translateY(-80px) rotateX(90deg);
+		}
+		.card .he.bottom{
+			background-color: black;
+			transform: translateY(80px) rotateX(-90deg);
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		.box{
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: relative;
+			transition: all .3s;
+			
+			animation: hua 2s;
+			animation-iteration-count: infinite;
+		}
+		.box:hover{
+			transform: scale(1.1) rotate(4deg);
+		}
+		@keyframes hua{
+			0%{background: red;top:0px; left: 0px;}
+			25%{background: blue;top:0px; left: 100px;}
+			50%{background: green;top:100px; left: 100px;}
+			75%{background: yellow;top:100px; left: 0px;}
+			100%{background: red;top:0px; left: 0px;}
+		}
+	</style>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <div class="big">
+    <div class="bigbox">
+    <div class="box" id="box1"  style="height:30px ;width:300px;background:gray">选项一</div>
+    <div class="box" id="box2"  style="height:30px ;width:300px;background:gray">选项二</div>
+    <div class="box" id="box3"  style="height:30px ;width:300px;background:gray">选项三</div>
+    <div class="box" id="box4"  style="height:30px ;width:300px;background:gray">选项四</div>
+</div>
+    <p class="hide" id="card1" style="height:200px ;width:300px;background:rgba(48, 28, 28, 0.74)"></p>
+    <p class="hide" id="card2" style="height:200px ;width:300px;background:rgba(48, 28, 28, 0.74)"></p>
+    <p class="hide" id="card3" style="height:200px ;width:300px;background:rgba(48, 28, 28, 0.74)"></p>
+    <p class="hide" id="card4" style="height:200px ;width:300px;background:rgba(48, 28, 28, 0.74)"></p>
+</div>
+    <script>
+    //     $("#box1").click(function(){
+    //     $("#card1").html("hellow!").toggle();
+    // })
+    // $("#box2").click(function(){
+    //     $("#card2").html("hellow!").toggle();
+    // })
+    // $("#box3").click(function(){
+    //     $("#card3").html("hellow!").toggle();
+    // })
+    // $("#box4").click(function(){
+    //     $("#card4").html("hellow!").toggle();
+    // })
+    $("#box1").click(function(){
+        $("#card1").html("Good Day!").toggleClass('hide');
+        // $(this).css('background-color','black');
+        // $(this).toggleClass('back');
+        $("#card1").toggle(function(){$("#card1").css("color","red");},
+    function(){$("#card1").css("color","blue");},
+    function(){$("#card1").css({"color":"green"});
+})
+    })
+    $("#box2").click(function(){
+        $("#card2").html("Good Morning!").toggleClass('hide');
+    })
+    $("#box3").click(function(){
+        $("#card3").html("Good Afternoon!").toggleClass('hide');
+    })
+    $("#box4").click(function(){
+        $("#card4").html("Good Evening!").toggleClass('hide');
+    })
+    </script>
+</body>
+<style>
+    body{
+        margin: 0;
+        font-size: 0;
+    }
+    .big{
+        width: 1210px;
+        margin: 0 auto;
+    }
+    p{
+        vertical-align: top;
+        display: inline-block;
+        margin: 0;
+        text-align: center;
+        line-height: 200px;
+        color:white;
+        font-weight: bold;
+        border:1px solid rgba(24, 19, 19, 0.644);
+        font-size: 20px;
+    }
+    .hide{
+        opacity: 0;
+    }
+    .back{
+        background-color: black;
+    }
+    .bigbox{
+        font-size: 0;
+    }
+    .box{
+        border:1px solid rgba(24, 19, 19, 0.644);
+        font-size:12px;
+        display: inline-block;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+    }
+</style>
+</html>

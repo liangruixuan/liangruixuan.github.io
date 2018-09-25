@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="box"></div>
+		<embed src="yuan.svg" type="image/svg+xml"></embed>
+		<svg width='500' height='500'>
+			<rect x='10' y='200' ry='20' rx='20' width='200px' height='200px' style='fill:red;stroke:black'></rect>
+			<circle cx='100' cy='100' r='50' stroke='black' stroke-width='2' fill='none'>
+			</circle>
+		</svg>
+		<svg>
+			<ellipse cx='100' cy='100' ry='20' rx='50' fill='' stroke='blue'></ellipse>
+			<ellipse cx='100' cy='100' ry='15' rx='37' fill='white' stroke='blue'></ellipse>
+			<line x1='200' y1='10' x2='300' y2='100' stroke='red'>
+			</line>
+			<line x1='180' y1='10' x2='280' y2='100' stroke='red'>
+			</line>
+		</svg>
+		<svg viewbox='0 0 100 100' id='text'>
+			<rect x='0' y='0' width='6' height='6' style='fill:lightseagreen'></rect>
+			<rect x='8' y='0' width='6' height='6' style='fill:lightseagreen'></rect>
+			<rect x='16' y='0' width='6' height='6' style='fill:lightseagreen'></rect>
+			<rect x='16' y='8' width='6' height='6' style='fill:lightseagreen'></rect>
+			<rect x='8' y='8' width='6' height='6' style='fill:lightseagreen'></rect>
+			<rect x='0' y='8' width='6' height='6' style='fill:lightseagreen'></rect>
+			<rect x='0' y='16' width='6' height='6' style='fill:lightseagreen'></rect>
+			<rect x='8' y='16' width='6' height='6' style='fill:lightseagreen'></rect>
+			<rect x='16' y='16' width='6' height='6' style='fill:lightseagreen'></rect>
+		</svg>
+		<style type="text/css">
+			#text{
+				width: 50px;
+				height: 50px;
+			}
+		</style>
+		<svg width='55px'height='55px'>
+			<rect x='0' y='0' width='4px' height='10px' fill='orange' transform='translate(0 0)'>
+				<animateTransform attributeType='xml' attributeName='transform' type='translate' values='0 0;0 20;0 0' dur='0.8s' repeatcount='indefinite'></animate>
+			</rect>
+			<rect x='8' y='0' width='4px' height='10px' fill='orange' transform='translate(0 0)'>
+				<animateTransform attributeType='xml' attributeName='transform' type='translate' values='0 0;0 20;0 0' begin='0.2s' dur='0.8s' repeatcount='indefinite'></animate>
+			</rect>
+			<rect x='16' y='0' width='4px' height='10px' fill='orange' transform='translate(0 0)'>
+				<animateTransform attributeType='xml' attributeName='transform' type='translate' values='0 0;0 20;0 0' begin='0.4s' dur='0.8s' repeatcount='indefinite'></animate>
+			</rect>
+			<rect x='24' y='0' width='4px' height='10px' fill='orange' transform='translate(0 0)'>
+				<animateTransform attributeType='xml' attributeName='transform' type='translate' values='0 0;0 20;0 0' begin='0.6s' dur='0.8s' repeatcount='indefinite'></animate>
+			</rect>
+		</svg>
+		<svg width='55px'height='55px'>
+			<rect x='0' y='0' width='4px' height='10px' fill='orange' transform='scale(1 0)'>
+				<animateTransform attributeType='xml' attributeName='transform' type='scale' values='1 0;1 2;1 0' dur='0.8s' repeatcount='indefinite'></animate>
+			</rect>
+			<rect x='8' y='0' width='4px' height='10px' fill='orange' transform='scale(1 0)'>
+				<animateTransform attributeType='xml' attributeName='transform' type='scale' values='1 0;1 2;1 0' begin='0.2s' dur='0.8s' repeatcount='indefinite'></animate>
+			</rect>
+			<rect x='16' y='0' width='4px' height='10px' fill='orange' transform='scale(1 0)'>
+				<animateTransform attributeType='xml' attributeName='transform' type='scale' values='1 0;1 2;1 0' begin='0.4s' dur='0.8s' repeatcount='indefinite'></animate>
+			</rect>
+			<rect x='24' y='0' width='4px' height='10px' fill='orange' transform='scale(1 0)'>
+				<animateTransform attributeType='xml' attributeName='transform' type='scale' values='1 0;1 2;1 0' begin='0.6s' dur='0.8s' repeatcount='indefinite'></animate>
+			</rect>
+		</svg>
+		<svg width='55px'height='55px'>
+			<rect x='0' y='0' width='4px' height='10px' fill='orange' >
+				<animate attributeType='xml' attributeName='y' values='7;13;7' dur='0.8s' repeatcount='indefinite'></animate>
+				<animate attributeType='xml' attributeName='height' values='16;4;16' dur='0.8s' repeatcount='indefinite'></animate>
+			</rect>
+			<rect x='8' y='0' width='4px' height='10px' fill='orange' transform='translate(0 0)'>
+				<animate attributeType='xml' attributeName='y' values='7;13;7' dur='0.8s' begin='0.2s' repeatcount='indefinite'></animate>
+				<animate attributeType='xml' attributeName='height' values='16;4;16' dur='0.8s' begin='0.2s' repeatcount='indefinite'></animate>
+			</rect>
+			<rect x='16' y='0' width='4px' height='10px' fill='orange' transform='translate(0 0)'>
+				<animate attributeType='xml' attributeName='y' values='7;13;7' dur='0.8s' begin='0.4s' repeatcount='indefinite'></animate>
+				<animate attributeType='xml' attributeName='height' values='16;4;16' dur='0.8s' begin='0.4s' repeatcount='indefinite'></animate>
+			</rect>
+			<rect x='24' y='0' width='4px' height='10px' fill='orange' transform='translate(0 0)'>
+				<animate attributeType='xml' attributeName='y' values='7;13;7' dur='0.8s' begin='0.6s' repeatcount='indefinite'></animate>
+				<animate attributeType='xml' attributeName='height' values='16;4;16' dur='0.8s' begin='0.6s' repeatcount='indefinite'></animate>
+			</rect>
+		</svg>
+				<svg width='55px'height='55px'>
+			<rect x='0' y='0' width='4px' height='10px' fill='orange' opacity='1'>
+				<animate attributeType='xml' attributeName='y' values='7;13;7' dur='0.8s' repeatcount='indefinite'></animate>
+				<animate attributeType='xml' attributeName='height' values='16;4;16' dur='0.8s' repeatcount='indefinite'></animate>
+				<animate attributeType='xml' attributeName='opacity' values='1;0.2;1' dur='0.8s' repeatcount='indefinite'></animate>
+			</rect>
+			<rect x='8' y='0' width='4px' height='10px' fill='orange' transform='translate(0 0)'>
+				<animate attributeType='xml' attributeName='y' values='7;13;7' dur='0.8s' begin='0.2s' repeatcount='indefinite'></animate>
+				<animate attributeType='xml' attributeName='height' values='16;4;16' dur='0.8s' begin='0.2s' repeatcount='indefinite'></animate>
+				<animate attributeType='xml' attributeName='opacity' values='1;0.2;1' dur='0.8s' begin='0.2s' repeatcount='indefinite'></animate>
+			</rect>
+			<rect x='16' y='0' width='4px' height='10px' fill='orange' transform='translate(0 0)'>
+				<animate attributeType='xml' attributeName='y' values='7;13;7' dur='0.8s' begin='0.4s' repeatcount='indefinite'></animate>
+				<animate attributeType='xml' attributeName='height' values='16;4;16' dur='0.8s' begin='0.4s' repeatcount='indefinite'></animate>
+				<animate attributeType='xml' attributeName='opacity' values='1;0.2;1' dur='0.8s' begin='0.4s' repeatcount='indefinite'></animate>
+			</rect>
+			<rect x='24' y='0' width='4px' height='10px' fill='orange' transform='translate(0 0)'>
+				<animate attributeType='xml' attributeName='y' values='7;13;7' dur='0.8s' begin='0.6s' repeatcount='indefinite'></animate>
+				<animate attributeType='xml' attributeName='height' values='16;4;16' dur='0.8s' begin='0.6s' repeatcount='indefinite'></animate>
+				<animate attributeType='xml' attributeName='opacity' values='1;0.2;1' dur='0.8s' begin='0.6s' repeatcount='indefinite'></animate>
+			</rect>
+		</svg>
+		
+		
+	</body>
+	<style type="text/css" >
+	.box{
+		opacity: ;
+	}
+
+	</style>
+</html>

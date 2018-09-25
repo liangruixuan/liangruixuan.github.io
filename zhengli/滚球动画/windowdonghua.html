@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="overflow-y: hidden">
+<div class="box"></div>
+<style>
+    body {
+        margin: 0;
+        background: rgb(138, 211, 240);
+        height: 500px;
+        
+    }
+    .box {
+        width: 20px;
+        height: 20px;
+        background: red;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        
+    }
+</style>
+<script>
+    var box = document.querySelector('.box');
+    var boxStyle = box.currentStyle? box.currentStyle:window.getComputedStyle(box, null);
+    // var boxSizeX = parseInt(boxStyle.width);
+    // var boxSizeY = parseInt(boxStyle.height);
+    var positionX = parseInt(boxStyle.left);
+    var positionY = parseInt(boxStyle.top);
+    var range = 300;
+
+    var speed = 1;
+
+    var moveRight = function () {
+        positionX += speed;
+        box.style.left = positionX + 'px';
+    };
+    var moveBottom = function () {
+        positionY += speed;
+        box.style.top = positionY + 'px';
+    };
+    var moveLeft = function () {
+        positionX -= speed;
+        box.style.left = positionX + 'px';
+    };
+    var moveTop = function () {
+        positionY -= speed;
+        box.style.top = positionY + 'px';
+    };
+
+    var id = setInterval(function () {
+        if (positionX < (window.innerWidth-20) && positionY === 0) {
+            console.log('right');
+            moveRight();
+        } else if (positionX === (window.innerWidth-20) && positionY < (window.innerHeight-20) ){
+            console.log('bottom');
+            moveBottom();
+        } else if (positionX <= (window.innerWidth-20) && positionY === (window.innerHeight-20) && (positionX !== 0) ||positionX > (window.innerWidth-20)){
+            console.log('left');
+            moveLeft();
+        } else if (positionX === 0 && positionY <= (window.innerHeight-20) ||positionY > (window.innerHeight-20)) {
+            console.log('top');
+            moveTop();
+        }
+    },10);
+
+    // document.body.onclick = function (ev) {s
+    //     clearInterval(id);
+    // }
+</script>
+</body>
+</html>

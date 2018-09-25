@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3 001"></div>
+            <div class="col-xs-3 002"></div>
+            <div class="col-xs-3 003"></div>
+            <div class="col-xs-3 004"></div>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="getdate()">（首选项）Primary</button>
+    </div>
+    <style>
+        .container button {
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* img{
+            width: 200px;
+        } */
+    </style>
+    <!-- <script>
+        var shuzi =1;
+
+        function getdate(){
+            $.get('https://www.apiopen.top/meituApi',{
+                'page':shuzi,
+            },
+            function(shuju,status){
+                $.each(shuju.data,function(index,item){
+                    if(index%4 ===0){
+                        $('.001').append('<img src="' +item.url + '" class="img-thumbnail">');
+                    }else if(index%4===1){
+                        $('.002').append('<img src="' + item.url +'" class="img-thumbnail">');
+                    }else if(index%4===2){
+                        $('.003').append('<img src="' + item.url +'" class="img-thumbnail">');
+                    }else if(index%4===3){
+                        $('.004').append('<img src="' + item.url +'" class="img-thumbnail">');
+                    }
+                })
+            },
+            );
+        
+            shuzi++;
+        }
+    </script> -->
+    <!-- <script>
+        var shuzi = 1;
+
+        function getdate() {
+            $.get('https://www.apiopen.top/meituApi', {
+                    'page': shuzi
+                },
+                function (shuju, status) {
+                    $.each(shuju.data, function (index, item) {
+                        if (index%4 === 0) {
+                            $('.001').append('<img src ="' + item.url + '"class = "img-thumbnail">');
+                        } else if (index%4 === 1) {
+                            $('.002').append('<img src ="' + item.url + '"class = "img-thumbnail">');
+                        } else if (index%4 === 2) {
+                            $('.003').append('<img src ="' + item.url + '"class = "img-thumbnail">');
+                        } else if (index%4 === 3) {
+                            $('.004').append('<img src ="' + item.url + '"class = "img-thumbnail">');
+                        }
+                    })
+                },
+            );
+            shuzi++;
+        }
+    </script> -->
+    <script>
+        var shizi= 1;
+        function getdate(){
+            $.get('https://www.apiopen.top/meituApi',{'gate':shizi},
+            function(shuju,status){
+                $.each(shuju.data,function(index,item){
+                    if(index%4===0){
+                        $('.001').append('<img src="' + item.url +'"class="img-thumbnail">');
+                    } else if(index%4===1){
+                        $('.002').append('<img src="' + item.url +'"class="img-thumbnail">');
+                    }else if(index%4===2){
+                        $('.003').append('<img src="' + item.url +'"class="img-thumbnail">');
+                    }else if(index%4===3){
+                        $('.004').append('<img src="' + item.url +'"class="img-thumbnail">');
+                    }
+                }
+                )
+            }
+            )
+            shuzi++;
+        }
+    </script>
+</body>
+
+</html>

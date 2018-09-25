@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="xiance">
+			<div class="box">
+				<div class="card one">one</div>
+				<div class="card two">two</div>
+				<div class="card three">three</div>
+				<div class="card four">four</div>
+				<div class="card five">five</div>
+				<div class="card six">six</div>
+				<div class="card seven">seven</div>
+				<div class="card eight">eight</div>
+			</div>
+		</div>
+	</body>
+	<style type="text/css">
+		
+		
+		
+		.xiance{
+			width: 200px;
+			height: 300px;
+			margin: 500px auto;
+			transform-style: preserve-3d;
+			perspective: 500px;
+			transform: rotateX(-46deg) rotateY(0deg);
+		}
+		.xiance .box{
+			width: 200px;
+			height: 300px;
+			position: relative;
+			transform: rotateX(-46deg) rotateY(0deg);
+			transform-style: preserve-3d;
+		}
+		.xiance .card{
+			width: 200px;
+			height: 300px;
+			background-color: lightblue;
+			text-align: center;
+			line-height: 300px;
+			font-size: 30px;
+			color: white;
+			font-weight: bold;
+			position: absolute;
+			top:0;
+			left: 0px;
+		}
+		.xiance .card.one{
+			background-color: red;
+			transform: translateX(169px) translateZ(-128px) rotateY(-45deg);
+			animation: one 4s infinite linear;
+		}
+		.xiance .card.two{
+			background-color: blue;
+			transform: translateX(-169px) translateZ(-128px) rotateY(45deg);
+			animation: two 4s infinite linear;
+		}
+		.xiance .card.three{
+			background-color: green;
+			transform: translateX(-169px) translateZ(213px) rotateY(-45deg);
+			animation: three 4s infinite linear;
+		}
+		.xiance .card.four{
+			background-color: yellow;
+			transform: translateX(169px) translateZ(213px) rotateY(45deg);
+			animation: four 4s infinite linear;
+		}
+		.xiance .card.five{
+			background-color: orange;
+			transform: translateX(-240px) translateZ(43px) rotateY(90deg);
+			animation: five 4s infinite linear;
+		}
+		.xiance .card.six{
+			background-color: black;
+			transform: translateX(240px) translateZ(43px) rotateY(90deg);
+			animation: six 4s infinite linear;
+		}
+		.xiance .card.seven{
+			background-color: palevioletred;
+			transform: translateX(0px) translateZ(-200px) rotateY(0deg);
+			animation: seven 4s infinite linear;
+		}
+		.xiance .card.eight{
+			background-color: gray;
+			transform: translateX(0px) translateZ(284px) rotateY(0deg);
+			animation: eight 4s infinite linear;
+		}
+		@keyframes zhuan{
+			0%{transform: rotateY(360deg);}
+			100%{transform: rotateY(0deg);}
+		}
+		@keyframes one{
+			0%{transform: translateX(169px) translateZ(-128px) rotateY(0deg);}
+			100%{transform: translateX(169px) translateZ(-128px) rotateY(360deg);}
+		}
+		@keyframes two{
+			0%{transform: translateX(-169px) translateZ(-128px) rotateY(0deg);}
+			100%{transform: translateX(-169px) translateZ(-128px) rotateY(360deg);}
+		}
+		@keyframes three{
+			0%{transform: translateX(-169px) translateZ(213px) rotateY(0deg);}
+			100%{transform: translateX(-169px) translateZ(213px) rotateY(360deg);}
+		}
+		@keyframes four{
+			0%{transform: translateX(169px) translateZ(213px) rotateY(0deg);}
+			100%{transform: translateX(169px) translateZ(213px) rotateY(360deg);}
+		}
+		@keyframes five{
+			0%{transform: translateX(-240px) translateZ(43px) rotateY(0deg);}
+			100%{transform: translateX(-240px) translateZ(43px) rotateY(360deg);}
+		}
+		@keyframes six{
+			0%{transform: translateX(240px) translateZ(43px) rotateY(0deg);}
+			100%{transform: translateX(240px) translateZ(43px) rotateY(360deg);}
+		}
+		@keyframes seven{
+			0%{transform: translateX(0px) translateZ(-200px) rotateY(0deg);}
+			100%{transform: translateX(0px) translateZ(-200px) rotateY(360deg);}
+		}
+		@keyframes eight{
+			0%{transform: translateX(0px) translateZ(284px) rotateY(0deg);}
+			100%{transform: translateX(0px) translateZ(284px) rotateY(360deg);}
+		}
+		.xiance .box{
+			/*transform-origin: 50% 50%;*/
+			animation: zhuan 4s infinite linear;
+		}
+	</style>
+</html>

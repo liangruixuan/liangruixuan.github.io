@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<label class="kaiguan">
+			<input type="checkbox" checked="" name="" id="" value="" />
+			<div class="kuan"></div>
+		</label>
+		
+		
+		<label class="kaiguan">
+			<input type="checkbox" name="" id="" value="" />
+			<div class="kuan round"></div>
+		</label>
+	</body>
+	<style type="text/css">
+		.kaiguan{
+			position: relative;
+			display: inline-block;
+			width: 62px;
+			height: 34px;
+		}
+		.kaiguan .kuan{
+			width: 62px;
+			height: 34px;
+			background: aliceblue;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			transition: all .3s;
+			
+		}
+		input{
+			display: none ;
+		}
+		.kaiguan .kuan:before{
+			width: 28px;
+			height: 28px;
+			content: '';
+			display: inline-block;
+			background: white;
+			position: relative;
+			top:3px;
+			left: 3px;
+			transition: all .3s;
+		}
+		input:checked+.kuan {
+				background-color: #2196F3;
+			}
+		input:checked+.kuan:before{
+			left: 31px;
+				
+				
+		}
+		.kaiguan .kuan.round{
+			border-radius:34px;
+		}
+		.kaiguan .kuan.round:before{
+			border-radius:50%;
+		}
+	</style>
+</html>

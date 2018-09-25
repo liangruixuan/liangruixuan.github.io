@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+    <div class="bigbox">
+        <div class="box">
+            <div class="card" id="kuan">
+                <img src="img/tu1.jpg" alt="">
+                <img src="img/tu2.jpg" alt="">
+                <img src="img/tu3.jpg" alt="">
+                <img src="img/tu4.jpg" alt="">
+            </div>
+        </div>
+        <span id="last"><div class="jiantou"></div></span>
+        <span id="next"><div class="jiantou"></div></span>
+        <div class="dian" id="dian">
+            <i id="one"></i>
+            <i id="two"></i>
+            <i id="three"></i>
+            <i id="four"></i>
+        </div>
+    </div>
+    <script>
+        var dizhi = $('img').index();
+        var tu=document.getElementById('kuan');
+        var imgs = tu.getElementsByTagName('img');
+        var dian = document.getElementById('dian');
+        var dians = document.getElementsByTagName('i');
+        var count = 0;
+        var guodu = true;
+        dians[0].style.background ='black';
+        $('#next').click(function () {
+            if (guodu) {
+                bian();
+                guodu = false;  
+                if ($('.card').css('left') === '-1200px') {
+                    $('.card').css('left', '0px');
+                    count=0;
+                } else {
+                    $('.card').css('left', '-=400');
+                    count++;
+                }
+                dians[count].style.background ='black';
+                setTimeout(function () {
+                    console.log(guodu);
+                    guodu = true;
+                    //    goudu=true;
+                }, 1000)
+            }
+        })
+        $('#last').click(function () {
+            if (guodu) {
+                bian();
+                guodu = false;
+                if ($('.card').css('left') === '0px') {
+                    $('.card').css('left', '-1200px');
+                    count=3;
+                } else {
+                    $('.card').css('left', '+=400px');
+                    count--;
+                }
+                dians[count].style.background ='black';
+                setTimeout(function () {
+                    console.log(guodu);
+                    guodu = true;
+                }, 1000)
+            }
+        })
+        var bian = function(){
+            for(var i=0;i<dians.length;i++){
+                dians[i].style.background = "gray";
+            }
+        }
+        for (var j = 0; j < dians.length; j++) {
+           
+           dians[j].onclick=function(){
+                count=$(this).index();
+                bian();
+                console.log('dianji');  
+                dians[count].style.background ='black';
+                tu.style.left ='-400'*count+'px';
+               console.log(count);
+           }
+        //    dians[count].style.background ='black';
+       }
+    </script>
+</body>
+<style>
+    /* body{
+        width: 100%;
+    } */
+    .bigbox {
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    .box {
+        width: 400px;
+        height: 225px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    span {
+        /* background: rgba(211, 211, 211,1); */
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        margin-top: -120px;
+    }
+    span:first-of-type {
+        float: left;
+    }
+    span:last-of-type {
+        float: right;
+        transform: rotate(180deg)
+    }
+    span .jiantou{
+        width: 17px;
+        height:17px;
+        border-top: 3px solid white;
+        border-left: 3px solid white;
+        transform: rotate(-45deg);
+        margin:10px 0 0 15px;
+    }
+    .card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1600px;
+        transition: all 1s;
+    }
+
+    img {
+        width: 400px;
+        float: left;
+    }
+    .dian{
+        width: 100px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        top:-20px; 
+    }
+    .dian i{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: gray;
+        border-radius: 50%;
+        z-index: 99;
+    }
+</style>
+
+</html>

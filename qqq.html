@@ -8,5 +8,42 @@
 </head>
 <body>
     <a href="">weqe</a>
+    <script type="text/javascript">
+    alert(null);
+    console.log('A'-'B'+2)
+
+    var _$te=0;
+    console.log(_$te);
+    var arr=[1,2,3,4];
+    Math.max(arr);
+    console.log(Math.max.call(Math,arr[0],arr[1]));
+    console.log(parseInt('ab34.3'))
+    parseInt('34asd')
+
+    var str = 'asidjlksajlkjflkjlg54564651';
+        // 1.将字符串转换成数组
+        var newArr = str.split("");
+        // 2.创建一个对象
+        var json = [];
+        // 3. 遍历数组，判断对象中是否存在数组中的值，如果存在值+1，不存在赋值为1
+        for(var i = 0;i< newArr.length;i++){
+            if(json[newArr[i]]){
+                json[newArr[i]] +=1;
+            }else{
+                json[newArr[i]] = 1;
+            }
+        }
+        // 4 定义两个变量存储字符值，字符出现的字数
+        var num = 0 ;
+        var number = "";
+        for(var k in json){
+            if(json[k]>num){
+                num = json[k];
+                number = k ;
+            }
+        }
+       console.log("出现次数："+num +"最多的字符："+ number);
+
+    </script>
 </body>
 </html>

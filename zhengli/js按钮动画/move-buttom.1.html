@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+    <div class="buttom">
+        <span class="buttom_circle"></span>
+        <a href="" class="buttom_inner">
+            <span class="buttom_text">buttom</span>
+        </a>
+    </div>
+    <script>
+        $('.buttom_inner').mouseenter(function(e){
+            var parenteroffset = $(this).offset();
+            var ralX =e.pageX -parenteroffset.left;
+            var ralY = e.pageY -parenteroffset.top;
+            $(this).prev('.buttom_circle').css({'left':ralX,'top':ralY});
+            $(this).prev('.buttom_circle').removeClass('leave');
+            $(this).prev('.buttom_circle').addClass('come');
+            console.log(ralX+'/'+ralY)
+        })
+        $('.buttom_inner').mouseleave(function(e){
+            var parenteroffset = $(this).offset();
+            var ralX =e.pageX -parenteroffset.left;
+            var ralY = e.pageY -parenteroffset.top;
+            $(this).prev('.buttom_circle').css({'left':ralX,'top':ralY});
+            $(this).prev('.buttom_circle').removeClass('come');
+            $(this).prev('.buttom_circle').addClass('leave');
+            console.log(ralX+'/'+ralY)
+        })
+    </script>
+</body>
+<style>
+    .buttom {
+        border: 0.5px solid  rgba(253, 253, 253, 0.356);
+        box-shadow: 3px 4px 18px -3px black;
+        width: 170px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        font-size: 20px;
+        border-radius: 8px;
+        margin: 100px auto;
+        position: relative;
+        background: rgb(175, 198, 206);
+        overflow: hidden;
+        color:white;
+    }
+    .leave{
+        animation:leave .5s forwards;
+    }
+    .come{
+        animation:come .5s forwards;
+    }
+    a {
+         color:white;
+        z-index: 100000; 
+        position: relative;
+        /* pointer-events: none;    */
+        border-radius: 8px;
+        display: inline-block;
+        text-decoration: none;
+        width: 100%;
+        
+    }
+
+    .buttom>span {
+        border-radius: 1000px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0px;
+        height: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    @keyframes leave {
+        0% {
+            width: 400px;
+            height: 400px;
+            margin-left: -200px;
+            margin-top: -200px;
+            background-color: rgba(20, 20, 15, 0.8);
+        }
+        100%{
+            width:0;
+            height: 0;
+            margin-left: 0;
+            margin-top: 0;
+            background-color: rgba(129, 80, 108,0.6);
+        }
+    }
+    @keyframes come {
+        0%{
+            width:0;
+            height: 0;
+            margin-left: 0;
+            margin-top: 0;
+            background-color: rgba(129, 80, 108,0.6);
+        }
+        100% {
+            width: 400px;
+            height: 400px;
+            margin-left: -200px;
+            margin-top: -200px;
+            background-color: rgba(20, 20, 15, 0.8);
+        }
+    }
+</style>
+
+</html>

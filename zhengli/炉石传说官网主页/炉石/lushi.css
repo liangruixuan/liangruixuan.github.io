@@ -1,0 +1,1427 @@
+
+			body{
+				margin: 0;
+				padding: 0;
+				border: 0;
+				background-image:url(../img/beijin.jpg);
+				background-repeat:no-repeat;
+				background-attachment: fixed;
+				background-size: cover;
+				position: relative;
+				list-style: none;
+				text-decoration: none ;
+				position: relative;
+			}
+			a{
+				text-decoration: none;
+			}
+			ul,li,p,h4,h5{
+				padding:0px;
+				margin: 0px;
+				list-style: none;
+			}
+			.bigbox{
+				width:100%;
+				background: #2c0903;
+			}
+			#kuai{
+				display: inline-block;
+				position: relative;
+				top:7px;
+				left: 0px;
+			}
+			header{
+				width:1200px;
+				background: #2c0903;
+				margin: 0 auto;
+				list-style: none;
+				overflow: hidden;
+			} 
+			header .jiantou{
+				float: right;
+				width: 14px;
+				height: 7px;
+				
+				background-image: url(../img/logo.png);
+				background-position: -147px -131px;
+				margin: 15px 2px;
+			}
+			header li a{
+				text-decoration: none;
+				color: gainsboro;
+				display: block;
+				margin: 0 10px;
+				/*float:left;*/
+			}
+			header li .card{
+				background: radial-gradient(ellipse farthest-side at center top,#283244 0,rgba(21,26,35,.95)100%);;
+				position: absolute;
+				top: 40px;
+				left: 0;
+				width: 100%;
+				text-align: center;	
+				visibility: hidden;
+				border: 1px solid #33373B;	
+				opacity: 0;
+				z-index: 3;
+			}
+			header li .card .tu {
+				width: 1140px;
+				height: 190px;
+				margin: 0px auto ;
+				/*margin-bottom: 20px;*/
+				
+			}
+			header li .card .cu {
+				width: 1200px;
+				height: 300px;
+				margin: 0px 200px ;
+				margin-top:-10px;
+				box-sizing: border-box;
+				text-align: center;
+				display: inline-block;
+				
+			}
+			
+			header li .card .tu a{
+				float: left;
+				width: 168px;
+				height: 168px;
+				position: relative;
+				display: inline-block;
+				border: 1px solid rgba(255,255,255,0.1);
+				/*border: 1px solid white;*/
+				/*float:left;*/
+				
+			}
+			header li .card .cu a{
+				float: left;
+				display: inline-block;
+				/*margin: 0px;*/
+				margin-top: -10px;
+				height: 300px;
+				
+			}
+			header li .card .cu a div{
+
+				
+			}
+			header li .card .tu img{
+				width: 168px;
+				height: 168px;
+
+			}
+			
+			header li>a:hover{
+				
+				color: white;
+				text-shadow:  0 0 15px #fff, 0 0 30px rgba(255,255,255,.3);
+			}
+			header li .card .tu a:hover:after{
+				/*z-index: 999;*/
+				content: "";
+				background: white;
+				width: 168px;
+				height: 168px;
+				opacity: 0.1;
+				border: 1px solid gray;
+				position:absolute;
+				top:0;
+				left: 0;
+
+			}
+			
+			header li a:hover +div{
+				visibility: visible;
+				transition: all .3s;
+				opacity: 1;
+			}
+			header li:hover div a:first-of-type{
+				transition: all .4s;
+				margin-top: 10px;
+			}
+			header li:hover div a:nth-of-type(2){
+				transition: all .5s;
+				margin-top: 10px;
+			}
+			header li:hover div a:nth-of-type(3){
+				transition: all .6s;
+				margin-top: 10px;
+			}
+			header li:hover div a:nth-of-type(4){
+				transition: all .7s;
+				margin-top: 10px;
+			}
+			header li:hover div a:nth-of-type(5){
+				transition: all .8s;
+				margin-top: 10px;
+			}
+			header li:hover div a:nth-of-type(6){
+				transition: all .9s;
+				margin-top: 10px;
+			}
+
+			header li .card:hover{
+				opacity: 1;
+				visibility: visible;
+			}
+			header li a:hover .jiantou{
+				background-position: -147px -145px;
+			}
+			header li{
+				float:left;
+				line-height: 40px;
+				overflow: hidden;
+			}
+			
+			header li:first-of-type a{
+				width: 70px;
+				height: 40px;
+				background-image: url(../img/logo.png);
+				background-position: -13px -75px;
+			}
+			header li:first-of-type a:hover{
+				background-position-y: -120px;
+				
+			}
+			/*header li:nth-of-type(2) a:hover{
+				background-position-y: -120px;
+				
+			}*/
+			header li:nth-of-type(6){
+				float: right;
+			}
+			header li:last-of-type{
+				float:right;
+			}
+			header li .card .cu a.left{
+				float: left;
+			}
+			header li .card .cu img{
+				width: 200px;
+				height: 200px;
+
+			}
+			header li .card .cu .right img{
+				width: 100px;
+				height: 100px;
+				display: block;
+				
+			}
+			header li .card .cu a .right{
+				float: right;
+				width: 0px;
+				overflow: hidden;
+				background: #2a252f;
+				transition: all .5s;
+			}
+			
+			header li .card .cu a .left{
+				float: left;
+
+			}
+			header li .card .cu a:hover .right{
+				width: 100px;
+				/*transition: all .5s;*/
+			}
+			header li .card .cu a:hover{
+				background: black;
+			}
+			header li .card .foot{
+				overflow: hidden;
+				height: 40px;
+				color: white;
+				border-top: solid 1px rgba(255,255,255,.08);
+			}
+			header li .card .foot ul{
+				display: inline-block;
+				/*margin: 0;*/
+				transform: translateY(-20px);
+				opacity: 0;
+			}
+			header li .card .foot a{
+				height: 40px;
+				display: inline-block;
+				/*margin-top: -50px;
+*/
+			}
+			header li:hover .card .foot ul{
+				transition-delay: 0.3s;
+				transition-duration: 0.8s;
+				opacity: 1;
+				transform: translateY(-10px);
+
+			}
+			header li .card .foot ul a:hover{
+				color: rgba(255,255,255,1);
+			}
+			section .left a{
+				width: 100px;
+				display: inline-block;
+			}
+			section .left a img{
+				width: 250px;
+			}
+			section .right{
+				float: right;
+				margin-top: 70px;
+				position: relative;
+				z-index: 0;
+			}
+			section .right input[type=text]{
+				width: 200px;
+				color: white;
+				padding: 10px 30px 10px 10px;
+				background: transparent;
+				border: 1px solid rgba(255,255,255,0.5);
+			}
+			section .right input[type=submit]{
+				width: 30px;
+				height: 30px;
+				background: url(../img/shousuo.png);
+				background-repeat:no-repeat;
+				background-position: center;
+				/*background-size:cover;*/
+				border: 0;
+				right: 4px;
+				top:4px;
+				position: absolute;
+				cursor: pointer;
+			}
+			section .logo{
+				
+				width: 1000px;
+				margin: 30px auto;
+			}
+			section .caidang{
+				width: 1000px;
+				background: red;
+				margin: 0 auto;
+				height: 50px;
+				position: sticky;
+				top:0;
+				z-index: 2;
+			}
+			section .caidang .top{
+				z-index: 2;
+				width: 1000px;
+				/*overflow: hidden;*/
+				background: url(../img/caidang.jpg);
+				background-size:cover ;
+				background-repeat:no-repeat ;
+				background-position: top center;
+			}
+			section .caidang .top li{
+				z-index: 2;
+				float: left;
+				width: 111px;
+				height: 50px;
+				position: relative;
+			}
+			section .caidang .top li a{
+				z-index: 2;
+				width: 111px;
+				height: 50px;
+				position: relative;
+				display: inline-block;
+			}
+			section .caidang .top li:nth-of-type(2){
+				background: url(../img/caidang.jpg);
+				background-repeat:no-repeat ;
+				background-position: -61px -1px;
+			}
+			section .caidang .top li:nth-of-type(3){
+				background: url(../img/caidang.jpg);
+				background-repeat:no-repeat ;
+				background-position: -175px -1px;
+			}
+			section .caidang .top li:nth-of-type(4){
+				background: url(../img/caidang.jpg);
+				background-repeat:no-repeat ;
+				background-position: -288px -1px;
+			}
+			section .caidang .top li:nth-of-type(5){
+				background: url(../img/caidang.jpg);
+				background-repeat:no-repeat ;
+				background-position: -403px -1px;
+			}
+			section .caidang .top li:nth-of-type(6){
+				background: url(../img/caidang.jpg);
+				background-repeat:no-repeat ;
+				background-position: -516px -1px;
+			}
+			section .caidang .top li:nth-of-type(7){
+				background: url(../img/caidang.jpg);
+				background-repeat:no-repeat ;
+				background-position: -631px -1px;
+			}
+			section .caidang .top li:nth-of-type(8){
+				background: url(../img/caidang.jpg);
+				background-repeat:no-repeat ;
+				background-position: -745px -1px;
+			}
+			section .caidang .top li:nth-of-type(9){
+				background: url(../img/caidang.jpg);
+				background-repeat:no-repeat ;
+				background-position: -860px -1px;
+			}
+			section .caidang .top li:first-of-type{
+				width: 58px;
+			}
+			section .caidang .top li:last-of-type{
+				width: 54px;
+			}
+			section .caidang .top li:hover{
+				
+				background-position-y: -105px;
+			}
+			section .caidang .top li:first-of-type img{
+				/*height: 50px;*/
+				position: absolute;
+				top: -19px;
+				left: -33px;
+				
+			}
+			section .caidang .top li:last-of-type img{
+				/*height: 50px;*/
+				position: absolute;
+				top: -19px;
+				right: -40px;
+				
+			}
+			section .caidang .top li .liebiao{
+				margin-top: -10px;
+				display: none;
+				
+			}
+			section .caidang .top li .liebiao a{
+				color: grey;
+				text-align: center;
+				text-decoration: none;
+				height: 30px;
+				line-height: 30px;
+				font-size: 15px;
+			}
+			section .caidang .top li:hover .liebiao{
+				/*height: 50px;*/
+				display: block;
+				background: rgba(77,9,8,1);
+			}
+			section .caidang .top li .liebiao a:hover{
+				background: brown;
+				color: white;
+				
+			}
+			section .ban{
+				width: 1000px;
+				margin: 0 auto;
+				position: relative;
+				top: 0px;
+				left: 0px;
+				/*overflow: hidden;*/
+			}
+			section .ban ul{
+				z-index: 1;
+				width: 1000px;
+				margin: 0 auto;
+				/*overflow: hidden;*/
+			}
+			section .ban .zuo{
+				position: relative;
+				z-index: 1;
+				width: 650px;
+				float: left;
+				background: url(../img/bg.png);
+				background-repeat-y: repeat ;
+				background-size: 100%;
+				/*background-repeat: no-repeat;*/
+				
+				
+			}
+			section .ban .zuo i{
+				width: 590px;
+				display: block;
+				
+				margin: 0 auto;
+			}
+			section .ban .zuo a{
+				z-index: 1;
+				width: 590px;
+				display: block;
+				position: relative;
+				margin: 0 auto;
+				
+			}
+			section .ban .you{
+				width: 350px;
+				/*float: right;*/
+				background: url(../img/2Fhomeconbar-bg.png);
+				background-repeat-y:repeat ;
+				background-position: 10px 0px;
+				position: absolute;
+				top: 0px;
+				right: 23px;
+				
+				
+			}
+			section .ban .zuo a .pen{
+				padding-top:20px ;
+				width: 590px;
+				margin: 0 auto;
+			}
+			section .ban .zuo a .pen img{
+				width: 590px;
+				
+			}
+			section .ban .zuo a .ti{
+				width: 590px;
+				background: rgba(0,0,0,0.5);
+				overflow: hidden;
+				margin: 4px 0;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				box-sizing: border-box;
+				border: 1px solid rgba(255,255,255,0.3);
+				
+			}
+			section .ban .zuo a .ti>p{
+				float: left;
+				line-height: 36.8px;
+				color: white;
+				margin-left: 10px;
+				font-weight: bold;
+				
+			}
+			section .ban .zuo a .ti ul{
+				margin-top:5px ;
+				margin-right: 5px;
+				width: 61px;
+				float: right;
+				
+			}
+			section .ban .zuo a .ti ul img{
+				width: 59px;
+				border: 1px solid #ffde00;
+				
+			}
+			section .ban .zuo .ka{
+				height: 194px;
+				background: url(../img/news-eyes-bg.jpg);
+				background-size: 100%;
+				background-repeat:no-repeat ;
+				background-position: bottom center;
+				box-sizing: border-box;
+			
+			}
+			section .ban .zuo .ka .le{
+				height: 189px;
+				background: url(../img/module.png);
+				background-size:100% ;
+				background-repeat:no-repeat ;
+				width: 285px;
+				float: left;
+				box-sizing: border-box;
+				/*text-align: center;*/
+				
+			}
+			section .ban .zuo .ka .re{
+				height: 189px;
+				background: url(../img/module.png);
+				background-size:100% ;
+				background-repeat:no-repeat ;
+				width: 285px;
+				float: right;
+			}
+			section .ban .zuo .ka ul{
+				height: 128px;
+				width: 255px;
+				margin: 12px auto;
+				box-sizing: border-box;
+				
+			}
+			section .ban .zuo .ka ul:hover img{
+				outline: 2px solid rgba(0,255,0,1);
+				box-sizing: border-box;
+			}
+			section .ban .zuo .ka ul a{
+				width: 255px;
+				display: block;
+				/*box-sizing: border-box;*/
+			}
+			section .ban .zuo .ka img{
+				margin-left: 1px;
+				margin-top: 1px;
+				width: 253px;
+				text-align: center;
+				/*box-sizing: border-box;*/
+				display: block;
+			}
+			section .ban .zuo .ka p{
+				text-align: center;
+				margin-left:-5px ;
+				font-style: normal;
+				
+			}
+			section .ban .zuo .lan{
+				padding: 20px 0;
+				overflow: hidden;
+				border-top: 1px solid #efdba8;
+    			border-bottom: 1px solid #dbc497;
+			}
+			/*section .ban .zuo.lan:nth-last-of-type(1){
+				margin-top:10px ;
+				
+			}*/
+		
+			section .ban .zuo .lan ul{
+				width: 192px;
+				float: left;
+			}
+			section .ban .zuo .lan ul img{
+				width: 190px;
+				border: 1px solid white;
+				margin: 0 auto;
+			}
+			section .ban .zuo .lan .wen{
+				width: 380px;
+				float: right;
+				color: black;
+			}
+			section .ban .zuo .lan:hover{
+				background: url(../img/Fhomenewsbg.png) repeat-y;
+				background-size: 100% auto;
+			}
+			section .ban .zuo .lan .wen p{
+				margin: 5px 0;
+				color: #695745;
+			}
+			
+			section .ban .zuo .lan .wen .shi dt,dd{
+				display: inline-block;
+				margin: 0;
+				font-size: 12px;
+				
+			}
+			section .ban .zuo .lan .wen .shi{
+				margin-top: 16px
+			}
+			section .ban .zuo .lan .wen .shi dt:before{
+				content: '';
+				width: 19px;
+				height: 18px;
+				background: url(../img/icon.png) no-repeat;
+				background-position:-80px -112px ;
+				display: inline-block;
+				position: relative;
+				top: 3px;
+				left: 0px;
+			}
+			section .ban .zuo .lan .wen .shi dt:hover:before{
+				background-position:-80px -129px ;
+			}
+			section .ban .zuo .lan .wen .shi dd{
+				margin: 0 35px;
+				
+			}
+			section .ban .zuo .kuan{
+				background: #f1dbb8;
+			}
+			section .ban .zuo .zuihou a{
+				display:block;
+				width: 588px;
+				text-align: center;
+				color: #5b4b38;
+				text-decoration: none;
+				padding: 5px 0;
+				margin: 10px auto;
+				background: #f1dbb8;
+				border: 1px solid rgba(255,255,255,0.3);
+				background: url(../img/dian.png);
+				background-repeat:no-repeat;
+				background-position: 336px 16px;
+				/*background: #f1dbb8;*/
+			}
+			section .ban .zuo .zuihou .kuan:hover{
+				background: #c3a473;	
+			}
+			.clear img{
+				width: 650px;
+	
+			}
+			.clear{
+				padding: 0;
+				position: relative;
+				top:18px;
+				left: 0px;
+			}
+			section .ban:after{
+				content: '';
+				display: block;
+				clear: both;
+			}
+			section .ban .you .feat{
+				position: relative;
+				top: 0px;
+				left: -7px;
+    			z-index: 0;
+				height:618px;
+				width: 345px;
+				background: url(../img/2Fhome-bg-cr.jpg);
+				background-repeat:no-repeat;
+				background-size:100%;
+				
+				
+			}
+			section .ban .you .feat>a{
+				display: block;
+				width: 350px;
+				height: 200px;
+				background: url(../img/2Fhome_logo.png);
+				background-repeat:no-repeat;
+				background-size:100% ;
+			}
+			section .ban .you .an{
+				margin-left: 15px;
+				width: 225px;
+				overflow: hidden;
+				margin: 51px auto;
+				position: relative;
+				left: 9px;
+				
+	
+			}
+			section .ban .you .an li{
+				/*display: block;*/
+				width: 75px;
+				height: 85px;
+				float: left;
+				list-style: none;
+	
+			}
+			section .ban .you .an  li:first-of-type a{
+				display: block;
+				width: 75px;
+				height: 85px;
+				background: url(../img/2Fdevice-icon.png);
+				background-repeat:no-repeat ;
+				background-position: 0px -180px !important;	
+			}
+			section .ban .you .an  li:nth-last-of-type(2) a{
+				display: block;
+				width: 75px;
+				height: 85px;
+				background: url(../img/2Fdevice-icon.png);
+				background-repeat:no-repeat ;
+				background-position:-80px 0px ;	
+	
+			}
+			section .ban .you .an  li:last-of-type a{
+				display: block;
+				width: 75px;
+				height: 85px;
+				background: url(../img/2Fdevice-icon.png);
+				background-repeat:no-repeat ;
+				background-position:-160px 0px ;	
+			}
+			section .ban .you .an  li a:hover{
+				background-position-y: -89px ;
+				
+			}
+			section .ban .you .xiazai{
+				width: 220px;
+				height: 61px;
+				margin: 0 auto;
+				position: relative;
+				top:-18px;
+				left: 11px;
+				background: url(../img/2Fdownload-btn2.png);
+				background-repeat:no-repeat ;
+				background-position:bottom center;
+			}
+			section .ban .you .xiazai a{
+				display: block;
+				width: 220px;
+				height: 61px;
+				z-index: 2;
+				position: relative;
+				/*background: url(../img/2Fdownload-btn2.png);
+				background-repeat:no-repeat ;
+				background-position:bottom center;*/
+			}
+			video{
+				width: 220px;
+				height: 61px;
+				display: block;
+    			position: absolute;
+			    top: 369px;
+			    left: 81px;
+			    z-index: 1;
+
+			}
+			section .ban .you .xinwen{
+				width: 345px;
+				/*height: 380px;*/
+				position: relative;
+				top: 0px;
+				left: 0px;
+				
+			}
+			section .ban .you .xinwen .minwen{
+				width: 330px;
+				
+				background: url(../img/top-bg.jpg);
+			    background-repeat: no-repeat;
+			    background-size: 100%;
+			    /*margin-right: 5px;*/
+				
+			}
+			section .ban .you .xinwen .neir{
+				width: 300px;
+				margin: 0px auto;
+				padding: 18px 22px;
+				position: relative;
+				
+			}
+			section .ban .you .xinwen .minwen h3{
+				line-height: 30px;
+				margin-left:20px ;
+				font-size: 18px;
+				color: #03345f;
+			}
+			section .ban .you .xinwen .minwen span{
+				background: url(../img/2Ficon.png);
+			    background-repeat: no-repeat;
+			    display: inline-block;
+			    vertical-align: middle;
+				height: 30px;
+				background-position:-87px -3px ;
+    			width: 30px;
+			}
+			section .ban .you .xinwen .neir .box{
+				width: 300px;
+				text-align: center;
+				
+			}
+			section .ban .you .xinwen .neir a{
+				display: inline-block;
+				width: 244px;
+				position: relative;
+				text-decoration: none;
+				color: #251c0f;;
+				
+			}
+			section .ban .you .xinwen .neir a:hover img:nth-of-type(2){
+				transform: scale(1.1);
+				
+			}
+		
+			section .ban .you .xinwen .neir .si:hover img:first-of-type{
+				filter:brightness(60%);
+				-webkit-filter:brightness(60%)
+				
+			}
+			section .ban .you .xinwen .neir a img:first-of-type{
+				
+				transition:all .3s;
+			}
+			section .ban .you .xinwen .neir a img:nth-of-type(2){
+				position: absolute;
+				top:0px;
+				left: 0px;
+				transition:all .3s;
+			}
+			h5{
+				margin: 0;
+				line-height: 25px;
+				
+			}
+			section .ban .you .xinwen .neir .zuotou{
+				width: 7px;
+				height: 14px;
+				background: bisque;
+				position: absolute;
+				top: 132px;
+				left: 30px;
+				background: url(../img/2Fesport-icon.gif) no-repeat left;
+				/*background-position: ;*/
+			}
+			section .ban .you .xinwen .neir .zuotou:hover{
+				
+				background-position-x: -16px;
+			}
+			section .ban .you .xinwen .neir .youtou{
+				width: 7px;
+				height: 14px;
+				background: bisque;
+				position: absolute;
+				top: 132px;
+				right: 30px;
+				background: url(../img/2Fesport-icon.gif) no-repeat left;
+				background-position-x: -8px;
+			}
+			section .ban .you .xinwen .neir .youtou:hover{
+				
+				background-position-x: -24px;
+			}
+			section .ban .you .xinwen .minwen .meiti{
+				/*background: url(../img/2Ficon.png);
+			    background-repeat: no-repeat;
+			    display: inline-block;
+			    vertical-align: middle;
+				height: 30px;*/
+				background-position:-46px -74px ;
+    			/*width: 30px;*/
+			}
+			section .ban .you .xinwen .minwen  .wenduan .ziduan{
+				width: 280px;
+				border-bottom:1px solid #e8d6a8 ;
+				font-size: 14px;
+			}
+			section .ban .you .xinwen .minwen  .wenduan .ziduan:hover{
+				color: orange;
+			}
+			section .ban .you .xinwen .minwen  .wenduan .ziduan:before{
+				content: '';
+				display: inline-block;
+				/*background: cornflowerblue;*/
+				width: 10px;
+				height: 10px;
+				background: url(../img/2Ficon.png) no-repeat;
+				background-position:-135px -143px;
+				margin-left: 10px ;
+			}
+			section .ban .you .xinwen .minwen  .neir .more{
+				display: inline-block;
+				width: 40px;
+				float: right;
+				
+				font-size: 10px;
+				vertical-align: middle;
+				text-decoration: underline;
+			}
+			section .ban .you .xinwen .minwen  .neir .more:after{
+				content: '';
+				display: inline-block;
+				width: 10px;
+				height: 8px;
+				background: url(../img/2Ficon.png) no-repeat;
+				background-position:-135px -143px;
+				position: relative;
+				top: -14px;
+				right: -34px;
+			}
+			
+			section .chongzhi li {
+				width: 280px;
+				margin: 17px auto;
+				background: #d1b181;
+				border: 1px solid #efd4ad;
+				position: relative;
+				
+			}
+			section .chongzhi li .tall{
+				margin: 15px 20px;
+				font-size: 17px;
+			}
+			section .chongzhi li a{
+				display: block;
+				height: 80px;
+				width: 280px;
+				background: url(../img/2Fcommnity-icon.png) no-repeat;
+				
+				position: absolute;
+				top:-10px;
+				right: -16px;
+			}
+			section .chongzhi li:first-of-type a{
+				background-position: 175px -279px;
+			}
+			section .chongzhi li:first-of-type a:hover{
+				background-position-y: -377px;
+			}
+			section .chongzhi li:nth-of-type(2) a{
+				background-position: 175px -775px;
+			}
+			section .chongzhi li:nth-of-type(2) a:hover{
+				background-position-y: -896px;
+			}
+			section .chongzhi li:nth-of-type(3) a{
+				background-position: 175px -1025px;
+				top:-7px
+			}
+			section .chongzhi li:nth-of-type(3) a:hover{
+				background-position-y: -1033px;
+			}
+			section .chongzhi li:nth-of-type(4) a{
+				background-position: 175px -1130px;
+				top:-6px;
+				height: 60px;
+				overflow: hidden;
+			}
+			section .chongzhi li:nth-of-type(4) a:hover{
+				background-position-y: -1133px;
+			}
+			section .chongzhi li:nth-of-type(5) a{
+				background-position: 175px -1629px;
+				top:-30px;
+				height: 88px;
+			}
+			section .chongzhi li:nth-of-type(5) a:hover{
+				background-position-y: -1721px;
+			}
+			section .chongzhi li:nth-of-type(6) a{
+				background-position: 175px -2040px;
+				top:-10px;
+				height: 88px;
+				
+			}
+			
+			section .chongzhi li:nth-of-type(6) a:hover{
+				background-position-y: -2043px;
+				
+			}
+			section .chongzhi li:nth-of-type(6){
+				position: relative;
+			}
+			section .chongzhi li img{
+				position: absolute;
+				top:-150px;
+				left: 0px;
+				visibility: hidden;
+				
+			}
+			section .chongzhi li:nth-of-type(6) a:hover +img{
+				visibility: visible;
+			}
+			section .chongzhi li:nth-of-type(7) a{
+				background-position: 175px -513px;
+				top:-10px;
+				height: 83px;
+			}
+			section .chongzhi li:nth-of-type(7){
+				overflow: hidden;
+			}
+			section .chongzhi li:nth-of-type(7) a:hover{
+				background-position-y: -518px;
+				
+			}
+			section .chongzhi li:nth-of-type(8) a{
+				background-position: 175px -1355px;
+				top:-1px;
+				height: 83px;
+			}
+			section .chongzhi li:nth-of-type(8) a:hover{
+				background-position-y: -1444px;
+				
+			}
+			section .ban .you .xinwen .minwen .lianxi{
+				
+				background-position:-4px -189px ;
+    			
+			}
+			
+			section .ban .you .xinwen .minwen .weix{
+				width: 130px;
+				float: left;
+				margin:  0 20px;
+				position: relative;
+				
+			}
+			section .ban .you .xinwen .minwen .wend{
+				width: 300px;
+				/*overflow: hidden;*/
+			}
+		
+			section .ban .you .xinwen .minwen .wend span{
+				width: 42px;
+				height: 42px;
+				background: url(../img/weixin.png) no-repeat;
+				
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				float: left;
+				
+			}
+			section .ban .you .xinwen .minwen .weix span{
+				background-position: -378px 0;
+			}
+			i{
+				font-style: normal;
+			}
+			
+			section .ban .you .xinwen .minwen .weix a:first-of-type i{
+				color: green;
+				
+			}
+			section .ban .you .xinwen .minwen .weix a:first-of-type:hover{
+				color: green;
+			}
+			section .ban .you .xinwen .minwen .weix a:first-of-type:hover +img{
+				visibility: visible;
+			}
+			section .ban .you .xinwen .minwen .weix a:nth-of-type(2):hover +img{
+				visibility: visible;
+			}
+			section .ban .you .xinwen .minwen .weix a:last-of-type i{
+				color: orange;
+			}
+			section .ban .you .xinwen .minwen .weix a:last-of-type:hover{
+				color: orange;
+			}
+			section .ban .you .xinwen .minwen .weix a{
+				width: 80px;
+				float: right;
+				font-size:small;
+			}
+			section .ban .you .xinwen .minwen .xinlan{
+				width: 130px;
+				float: right;
+			}
+			section .ban .you .xinwen .minwen .xinlan a{
+				width: 80px;
+				float: right;
+				font-size:medium;
+				margin-top:10px;
+			}
+			section .ban .you .xinwen .minwen .xinlan span{
+				background-position: -210px 2px;
+				transition: all .3s;
+			}
+			section .ban .you .xinwen .minwen .xinlan a:hover{
+				color: orange;
+			}
+			section .ban .you .xinwen .minwen .xinlan a:hover +span{
+				background-position: -210px -58px;
+				
+			}
+			section .ban .you .xinwen .minwen .weix .li:hover +span{
+				background-position: -463px -60px;
+				
+			}
+			section .ban .you .xinwen .minwen .weix .guanw{
+				background-position: -463px 0;
+				transition: all .3s;
+			}
+			section .ban .you .xinwen .minwen .weix .li{
+				width: 80px;
+				
+				font-size:medium;
+				margin-top:10px;
+			}
+			section .ban .you .xinwen .minwen .youxian{
+				width: 280px;
+				overflow: hidden;
+				margin: 0px auto;
+				padding: 10px 0;
+				padding-left: 15px;
+			}
+			section .ban .you .xinwen .minwen .youxian .let{
+				width: 130px;
+				float: left;
+			}
+			section .ban .you .xinwen .minwen .youxian a{
+				font-size: 13px;
+				
+			}
+			section .ban .you .xinwen .minwen .youxian .rig{
+				width: 130px;
+				float: right;
+			}
+			section .ban .you .xinwen .minwen .youxian .let a:hover{
+				color: orange;
+			}
+			section .ban .you .xinwen .minwen .youxian .rig a:hover{
+				color: orange;
+			}
+			section .ban .you .jiao img{
+				height: 50px;
+				width: 350px;
+				position: absolute;	
+				bottom: -21px;
+				right: 0px;
+			}
+			section .ban .you .xinwen .minwen .weix img{
+				width: 90px;
+				height: 90px;
+				position: absolute;
+				bottom: 44px;
+				left: 0px;
+				visibility: hidden;
+			}
+			section .ban .you .xinwen .minwen .weix .weima4{
+				width: 90px;
+				height: 90px;
+				position: absolute;
+				bottom: 32px;
+				left: -51px;
+				transition: all 0;
+				
+			}
+			section .ban .you .xinwen .minwen .weix .li:hover .weima4{
+				visibility: visible;
+			}
+			body .dibu{
+			
+			width: 100%;
+			height: 471px;
+			margin:  130px 0 -266px 0;
+			background: url(../img/2Ffooter.jpg) no-repeat;
+			position: relative;
+			
+			}
+			body .dibu .anliu{
+			width: 349px;
+    		height: 87px;
+			background: url(../img/2Freg-bg.png) no-repeat;
+			margin: 0 auto;
+			position: absolute;
+			top:-30px;
+			left: 50%;
+			margin-left: -175px;
+			}
+			body .dibu .anliu a{
+			display: block;
+			width: 289px;
+			height: 78px;
+			margin: 9px 0px 0px 49px ;
+			background: url(../img/2Freg-btn.png) no-repeat;
+			
+			}
+			body .dibu .anliu a:hover{
+			background-position:0px -84px;
+			}
+			body .dibu .neirong {
+			width: 1000px;
+			height: 300px;
+			margin: 0 auto;
+			padding-top:80px;
+			}
+			body .dibu .neirong header{
+				width: 100%;
+				
+			}
+			body .dibu .neirong header .zuo{
+				width: 340px;
+				height: 30px;
+				float: left;
+				
+			}
+			body .dibu .neirong header a{
+			color: white;
+			text-decoration: none;
+			margin: 0 10px;
+			font-size:15px ;
+			}
+			body .dibu .neirong header .you{
+				width: 340px;
+				height: 30px;
+				float: right;
+			}
+			body .dibu .neirong header .zuo a:before{
+				width: 19px;
+				height: 19px;
+				content: '';
+				display: inline-block;
+				background: url(../img/2Ff-business.png) no-repeat;
+				
+				vertical-align: middle;
+			}
+			body .dibu .neirong header .zuo a:first-of-type:before{
+			background-position:-6px -7px ;
+			}
+			body .dibu .neirong header .zuo a:nth-of-type(2):before{
+			background-position:-36px -8px;
+			}
+			body .dibu .neirong header .zuo a:nth-of-type(3):before{
+			background-position:-8px -33px;
+			}
+			body .dibu .neirong header .you span{
+			height: 30px;
+			display: inline-block;
+			vertical-align: middle;
+			color: white;
+			font-size: 18px;
+			padding-bottom:5px ;
+			
+			}
+			body .dibu .neirong header .you span a:first-of-type{
+				
+				display: inline-block;
+				width: 95px;
+				height: 23px;
+				background: url(../img/2Fbusiness-logo.png) no-repeat;
+				background-position: -350px 3px;
+			
+			}
+			body .dibu .neirong header .you span  a  i:first-of-type{
+			display: inline-block;
+			background: #ac771f;
+			height: 10px;
+			width: 2px;
+			margin: -8px 0 3px 6px;
+			}
+			body .dibu .neirong header .you span  a  i:last-of-type{
+			display:block;
+			background: #ac771f;
+			height: 2px;
+			width: 10px;
+			margin: -14px 0 4px 2px;
+			}
+			
+			body .dibu .neirong header .you span  a:nth-of-type(2){
+			border: 1px solid #2d1702;
+			background: #241101;
+			display: inline-block;
+			width: 14px;
+			height: 14px;
+			margin-left:-11px ;
+			}
+			body .dibu .neirong header .you  span ul{
+				position: relative;
+				top: -23px;
+				right: -226px;
+				width: 70px;
+				height: 30px;
+				font-size:15px ;
+
+			}
+			body .dibu .neirong header .you  span ul a:first-of-type{
+				display: inline-block;
+				width: 14px;
+				height: 14px;
+				background: #241101;
+				position: relative;
+				top:-19px;
+				right: -67px;
+				border: 1px solid #2d1702;
+			}
+			body .dibu .neirong header .you  span ul a:first-of-type .shanjiao{
+				width: 1px;
+				height: 1px;
+				/*background: aliceblue;*/
+				border-top: 4px solid #ac771f;
+				border-left: 4px solid transparent;
+				border-right: 4px solid transparent;
+				margin: 4px 0px 1px 2px;
+			}
+			body .dibu .neirong .cprt{
+				width: 1000px;
+				margin: 0 auto;
+				margin-top:50px ;
+				
+			}
+			body .dibu .neirong .cprt>a:first-of-type{
+				display: inline-block;
+				width: 140px;
+				height: 80px;
+				background: url(../img/2Flogo_blizzard.png) no-repeat;
+				overflow: hidden;
+			}
+			body .dibu .neirong .cprt>a:last-of-type{
+				display: inline-block;
+				width: 125px;
+				height: 38px;
+				background: url(../img/2Flogo_ne.png) no-repeat;
+				overflow: hidden;
+			}
+			body .dibu .neirong .cprt .info{
+				width: 700px;
+				float: right;
+			}
+			body .dibu .neirong .cprt .info ul li{
+				display: inline-block;
+				margin: 10px 5px;
+				
+			}
+			body .dibu .neirong .cprt .info ul li a{
+				text-decoration: none;
+				color: #ccc;
+			}
+			body .dibu .neirong .cprt .info ul li:after{
+				display: inline-block;
+				content: '|';
+				margin-left:10px ;
+				color: #ac771f;
+				
+			}
+			body .dibu .neirong .cprt .info ul li:last-of-type:after{
+		
+				content: '|';
+				display: none;
+				
+				
+			}
+			body .dibu .neirong .cprt .info p,a{
+				color: #552c09;
+				font-size: 15px;
+			}
+			body .dibu .neirong .cprt .info p a:hover{
+				color: white;
+			}
+			body .dibu .neirong .cprt .info .bumen>a{
+				display: inline-block;
+				width: 27px;
+				height: 26px;
+			}
+			body .fanhui{
+				width: 82px;
+				position: sticky;
+				float: right;
+				bottom: 0px;
+				
+				right: 10px;
+				z-index: 1000;
+				margin-bottom: 0px;
+			}
+			body .fanhui a{
+				
+				margin: 5px 0;
+				display: block;
+				width: 82px;
+				height: 82px;
+				background: rgba(96,52,18,.6);
+				border-radius:50% ;
+			}
+			body .fanhui .one{
+				position: relative;
+				
+			}
+			body .fanhui .one:hover img:nth-of-type(2){
+			transform:rotateY(90deg);
+			
+			
+			
+			}
+			body .fanhui .one:hover img:first-of-type{
+			transform:rotateY(0deg);
+			/*visibility: visible;*/
+			/*transition: all .6s linear;*/
+			backface-visibility: hidden;
+			
+			}
+			body .fanhui .one img:first-of-type{
+			/*visibility: hidden;*/
+			transform:rotateY(-180deg);
+			transition: all .6s linear;
+			}
+			body .fanhui .one img:nth-of-type(2){
+				position: absolute;
+				top:0px;
+				left: 0px;
+				transition: all .3s linear 0s;
+				/*visibility: hidden;*/
+				
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

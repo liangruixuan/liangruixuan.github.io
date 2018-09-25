@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="san">
+			<div class="bigbox">
+				<div class="tu1">
+					<div class="nvhai">
+						<img src="../img/nvhai.jpg"/>
+					</div>
+					<div class="wenzi">
+						<h3>Duende</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae libero orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed vestibulum.</p>
+					</div>
+				</div>
+			</div>
+			<div class="bigbox">
+				<div class="tu1">
+					<div class="nvhai">
+						<img src="../img/nvhai1.jpg"/>
+					</div>
+					<div class="wenzi">
+						<h3>Duende</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae libero orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed vestibulum.</p>
+					</div>
+				</div>
+			</div>
+			<div class="bigbox">
+				<div class="tu1">
+					<div class="nvhai">
+						<img src="../img/nvhai2.jpg"/>
+					</div>
+					<div class="wenzi">
+						<h3>Duende</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae libero orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed vestibulum.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<style type="text/css">
+		body{
+			background: url(../img/background.jpg) no-repeat;
+			background-size: cover;
+		}
+		p,h3{
+			margin: 0;
+			padding: 0;
+		}
+		.san{
+			
+			width: 980px;
+			margin: 100px auto;
+		}
+		.bigbox{
+		margin:0 10px;
+		display: inline-block;
+		width: 300px;
+		perspective: 500px;
+		/*transform-style: preserve-3d;*/
+		}
+		.tu1{
+			position: relative;
+			width: 300px;
+			transition: all .4s;
+			transform-style: preserve-3d;
+			}
+		.nvhai{
+			width: 300px;
+			height: 300px;
+		}
+		.wenzi{
+			position: absolute;
+			top:0;
+			left: 0px;
+			width: 300px;
+			height: 300px;
+			text-align: center;
+			background-color: rgba(0,0,0,0.5);
+			color: white;
+			transform: rotateY(90deg);
+		}
+		.wenzi h3{
+			padding-top: 50px ;
+		}
+		.wenzi h3:after{
+			
+			border-bottom: 1px solid white;
+			display: block;
+			width: 80%;
+			content: '';
+			margin: 20px auto;
+			
+		}
+		.wenzi p:after{
+			
+			border-bottom: 1px solid white;
+			display: block;
+			width: 80%;
+			content: '';
+			margin: 20px auto;
+			
+		}
+		
+		.bigbox:hover .tu1{
+			transform: rotateY(-90deg);
+		}
+	</style>
+</html>

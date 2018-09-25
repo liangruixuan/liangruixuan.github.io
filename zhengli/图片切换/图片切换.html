@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="big">
+    <div class="box">
+        <img src="img/咨询.png" alt="" id="pic">
+    </div>
+    <input type="button" id="next" value="next">
+    <input type="button" id="last" value="last">
+</div>
+<script>
+     alert('请重新输入');
+    var next =document.getElementById("next");
+    var last =document.getElementById("last");
+    var imgs = ["咨询.png", "地区.png","微信.png","统计.png","维护.png", "预约排期.png"];
+    var i=0;
+    var pic = document.getElementById("pic")
+    next.onclick = function(){
+        i++;
+        if(i>imgs.length-1){
+            i=0;
+        }
+        pic.src = "img/" + imgs[i];
+        console.log(i);
+    }
+    last.onclick = function(){
+        i--;
+        if(i<0){
+            i=imgs.length-1;
+        }
+        pic.src = "img/" + imgs[i];
+        console.log(i);
+    }
+</script>
+</body>
+<style>
+    .box{
+        width:202px;
+        height: 202px;
+        background:lightblue;
+        margin: 0 auto;
+        position:relative;
+    }
+    .big{
+        width:202px;
+        height: 202px;
+        margin: 0 auto; 
+        position:relative;
+    }
+    #next{
+        display: inline-block;
+        position: absolute;
+        right:0;
+        top:0；
+    }
+    .box img{
+        display:block;
+        position: absolute;
+        top:0;
+        left:0;
+        /* transition:all .5s; */
+    }
+</style>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="juzhong">
+			<h2>您的职业（单选框）</h2>
+			<label for="shi" class="shi">
+				<input type="radio" name="radio" id="shi" value="" />
+				<div class="box"><p>视觉设计师</p></div>
+			</label>
+			<label for="jiao" class="jiao">
+				<input type="radio" name="radio" id="jiao" value="" />
+				<div class="box"><p>交互设计师</p></div>
+			</label>
+			<label for="qian" class="qian">
+				<input type="radio" name="radio" id="qian" value="" />
+				<div class="box"><p>前端工程师</p></div>
+			</label>
+			<label for="shu" class="shu">
+				<input type="radio" name="radio" id="shu" value="" />
+				<div class="box"><p>数据分析师</p></div>
+			</label>
+			<br /><br />
+			<div class="bigbox">
+				<h2>您擅长的技能（复选框）</h2>
+				<div class="duoxuan">
+					<label for="html" class="shi">
+						<input type="checkbox" name="" id="html" value="" />
+						<div class="box"><p>HTML</p></div>
+						</label>
+					<label for="css" class="jiao">
+						<input type="checkbox" name="" id="css" value="" />
+						<div class="box"><p>CSS</p></div>
+					</label>
+					<label for="java" class="qian">
+						<input type="checkbox" name="" id="java" value="" />
+						<div class="box"><p>JavaScript</p></div>
+					</label>
+					<label for="seo" class="shu">
+						<input type="checkbox" name="" id="seo" value="" />
+						<div class="box"><p>SEO</p></div>
+					</label>
+					<label for="ha" class="shu">
+						<input type="checkbox" name="" id="ha" value="" />
+						<div class="box"><p>PHP</p></div>
+					</label>
+					<label for="ho" class="shu">
+						<input type="checkbox" name="" id="ho" value="" />
+						<div class="box"><p>JAVA</p></div>
+					</label>
+				</div>
+			</div>
+		</div>
+		
+		
+	</body>
+	<style type="text/css">
+		.juzhong .bigbox{
+			width: 100%;
+		}
+		.juzhong{
+			width: 467px;
+			margin: 20px auto;
+		}
+		.juzhong .duoxuan{
+			
+			width: 806px;
+			margin-left: -117px;
+		}
+		h2{
+			text-align: center;
+		}
+		p{
+			height: 16px;
+			
+			color: #b3b3b3;
+			line-height: 16px;
+			margin: 10px 0;
+			vertical-align: middle;
+		}
+		p:before{
+			margin:  -3px 5px 0 5px;
+			content: '';
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			vertical-align: middle;
+			background: url(../img/input-unchecked.png);
+		}
+		.shi{
+			position: relative;
+			width: 113px;
+			height: 36px;
+			display: inline-block;
+		}
+		.jiao{
+			position: relative;
+			width: 113px;
+			height: 36px;
+			display: inline-block;
+		}
+		.qian{
+			position: relative;
+			width: 113px;
+			height: 36px;
+			display: inline-block;
+		}
+		.shu{
+			position: relative;
+			width: 113px;
+			height: 36px;
+			display: inline-block;
+		}
+		.box{
+			display: inline-block;
+			width: 113px;
+			height: 36px;
+			background: #ece8e8;
+			position: absolute;
+			top:0px;
+			left: 0px;
+			text-align: center;
+			border-radius:5px ;
+			
+			
+		}
+		input:checked+.box p{
+			color: white;
+		}
+		input:checked+.box{
+			background-color: lightskyblue
+		}
+		input:checked+.box p:before{
+			background: url(../img/input-checked.png);
+		}
+	</style>
+</html>

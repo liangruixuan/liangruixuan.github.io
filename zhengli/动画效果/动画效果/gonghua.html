@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="donghua">
+			
+		</div>
+		<div class="box">
+			
+		</div>
+		<div class="jianshi">
+			
+		</div>
+		<a href="" class="ha">hahahahh</a>
+		<a href="" class="fanda">hahahahh</a>
+		<a href="" class="zhen">hahahahh</a>
+		<a href="" class="huan">hahahahh</a>
+		<a href="" class="shen">hahahahh</a>
+		<a href="" class="tui">hahahahh</a>
+		<div class="bigbox">
+			<div class="toushi"></div>
+			
+		</div>
+		<div class="bigbox">
+			<div class="toushi-oo"></div>
+			
+		</div>
+		<div class="yuan">
+			<a href="">
+				<div class="img"><img src="../img/hua.jpg"/></div>
+				<div class="info">
+					<h3>haha haha</h3>
+					<hr />
+					<p>hahahsjfjsakflas</p>
+				</div>
+			</a>
+		</div>
+		<div class="yuan">
+			<a href="">
+				<div class="img one"><img src="../img/hua.jpg"/></div>
+				<div class="info one">
+					<h3>haha haha</h3>
+					<hr />
+					<p>hahahsjfjsakflas</p>
+				</div>
+			</a>
+		</div>
+		<div class="yuan">
+			<a href="">
+				<div class="img two"><img src="../img/hua.jpg"/></div>
+				<div class="info two">
+					<h3>haha haha</h3>
+					<hr />
+					<p>hahahsjfjsakflas</p>
+				</div>
+			</a>
+		</div>
+	</body>
+	<style type="text/css">
+		@keyframes jianshi{
+			0%{background-position: 200px;}
+			100%{background-position: 100%;}
+		}
+		.jianshi{
+			
+			width: 200px;
+			height: 312px;
+			background: url(../img/walkingdead.png);
+			background-color: lightblue;
+			animation: jianshi 2s infinite linear;
+			animation-timing-function: steps(10,start);
+		}
+		.yuan a .info.two{
+			opacity: 1;
+		}
+		
+		.yuan a .img.two{
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			transform: translateY(220px) rotateX(-90deg);
+			transform-origin: 0 10%;
+		}
+		.yuan a:hover .img.two{
+			transform: translateX(0px) scale(1) ;
+			
+		}
+		.yuan a:hover .info.two{
+			transform: translateX(0px);
+			
+		}
+		.yuan a{
+			padding: 0;
+			position: relative;
+			display: block;
+			margin: 0 auto;
+			width: 440px;
+			height: 440px;
+			/*background: aliceblue;*/
+		}
+		.yuan a .img{
+			width: 220px;
+			display: inline-block;
+			transition: all .3s;
+			z-index: 9999;
+			position: relative;
+			z-index: 1;
+			
+			
+		}
+		.yuan a img{
+			width: 220px;
+			height: 220px;
+			border-radius:50% ;
+		}
+		.yuan a .img:before{
+			border-radius:50% ;
+			position: absolute;
+			top:0px;
+			left: 0px;
+			content: '';
+			display:inline-block;
+			width: 222px;
+			height: 220px;
+			border: 20px solid rgba(255,255,255,0.5);
+			box-sizing: border-box;
+			z-index: 1;
+		}
+		.yuan a .info{
+			
+			transition: all .3s;
+			display: inline-block;
+			width: 220px;
+			height: 220px;
+			float: right;
+			text-align: center;
+			border-radius:50% ;
+			background-color: #333333;
+			color: white;
+			opacity: 0;
+			z-index: 0;
+			position: relative;
+			
+		}
+		.yuan a .info.one{
+			opacity: 1;
+		}
+		.yuan a .img.one{
+			transform: rotateY(180deg);
+			transform-origin: 100% 50% 0;
+			transition: all .5s;
+		}
+		h3{
+			padding-top: 35px;
+			margin-top: 30px;
+			line-height: 20px;
+			text-transform: uppercase;
+		}
+		p{
+			margin: 5px 0;
+		}
+		text-shadow: 0 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.3);
+		.yuan a .info h3{
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			padding: 55px 0 0 0;
+		}
+		.yuan a:hover .img{
+			transform: translateX(-100px) scale(0.5);
+		}
+		.yuan a:hover .img.one{
+			transform: translateX(0px) scale(1) rotateY(0deg);
+			
+		}
+		.yuan a:hover .info.one{
+			transform: translateX(0px);
+			
+		}
+		.yuan a:hover .info{
+			transform: translateX(-200px);
+			opacity: 1;
+		}
+		@keyframes more{
+			0%{background-position-x: 180px;
+			}
+			100%{background-position-x: -1080px;
+			}
+		}
+		@keyframes quan{
+			0%{background-position-x:0;
+			}
+			100%{background-position-x: 100%;
+			}
+		}
+		.donghua {
+			display: inline-block;
+			width: 180px;
+			height: 300px;
+			background: url(../img/sprites.png) no-repeat;
+			background-color:white ;
+			
+			animation-name: more;
+			animation-duration: 1s ;
+			animation-timing-function: steps(7,start);
+			animation-iteration-count: infinite;
+			
+			
+			
+		}
+		.box{
+			display: inline-block;
+			width: 76.5px;
+			height: 81px;
+			background: url(../img/sprites-IORI.jpg) no-repeat;
+			background-color:white ;
+			animation-name: quan;
+			animation-duration: 2s ;
+			animation-timing-function: steps(26,start);
+			animation-iteration-count: infinite;
+			
+			
+		}
+		@keyframes dou{
+			0%{transform: skewY(10deg);}
+			20%{transform: skewY(-8deg);}
+			40%{transform: skewY(6deg);}
+			60%{transform: skewY(-4deg);}
+			80%{transform: skewY(2deg);}
+			100%{transform: skewY(0deg);}
+		}
+		@keyframes da{
+			0%{transform: scale(1);}
+			50%{transform: scale(1.2);}
+			100%{transform: scale(1);}
+		}
+		@keyframes zhen{
+			0%{transform: rotate(1deg);}
+			20%{transform: rotate(-0.8deg);}
+			40%{transform: rotate(0.6deg);}
+			60%{transform: rotate(-0.4deg);}
+			80%{transform: rotate(0.2deg);}
+			100%{transform: rotate(0deg);}
+		}
+		a{
+			text-decoration: none;
+		}
+		a{
+			display: inline-block;
+			background: #e1e1e1;
+			color: #666;
+			padding: 10px;
+			
+			
+			
+		}
+		a.ha:hover{
+			animation-name: dou;
+			animation-duration:.7s;
+			animation-timing-function: ease-in-out;
+			transform-origin: 100% 0 0 ;
+		}
+		a.fanda:hover{
+			animation-name: da;
+			animation-duration:.6s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+			
+		}
+		a.zhen:hover{
+			animation-name: zhen;
+			animation-duration:.6s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+			transform-origin: 50% 500% 0;
+			
+		}
+		a.huan{
+			position: relative;
+			z-index: 0;
+			overflow:hidden;
+		}
+		a.huan:before{
+			width: 0px;
+			height: 0px;
+			background: cornflowerblue;
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top:0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			margin: auto auto;
+			z-index: -1;
+			transition: all .3s;
+			border-radius: 50%;
+			/*transform-origin: 100% 0 0;*/
+		}
+		a.huan:hover{
+			color: white;
+		}
+		a.huan:hover:before{
+			width: 100%;
+			height: 100%;
+			transform: scale(2);
+		}
+		a.shen{
+			position: relative;
+			z-index: 0;
+		}
+		a.shen:before{
+			width: 0;
+			height:100%;
+			background: cornflowerblue;
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top:0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			margin: 0 auto;
+			z-index: -1;
+			transition: all .3s;
+			/*transform-origin: 100% 0 0;*/
+		}
+		a.shen:hover:before{
+			width: 100%;
+		}
+		a.shen:hover{
+			color: white;
+		}
+		a.tui{
+			position: relative;
+			z-index: 0;
+		}
+		a.tui:before{
+			transform: scaleX(0);
+			-webkit-transform: scaleX(0);
+			background: cornflowerblue;
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top:0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			z-index: -1;
+			transition: all .3s;
+			transform-origin: 0 0 0;
+		}
+		a.tui:hover:before{
+			transform: scaleX(1);
+			transition-timing-function: cubic-bezier(0.69, 1.81, 0.29, 0.76);
+		}
+		a.tui:hover{
+			color: white;
+		}
+		.toushi:hover{
+			transform: rotateY(45deg);
+			opacity: .5;
+			transform-origin: 0 100% 0;
+		}
+		.toushi-oo:hover{
+			transform: rotateY(-45deg);
+			opacity: .5;
+		}
+		.bigbox{
+			background: grey;
+			width: 100px;
+			margin: 10px auto;
+			perspective: 100px;
+			-webkit-perspective: 100px
+		}
+		.toushi{
+			width: 100px;
+			height: 100px;
+			background: red;
+			transition: all .3s;
+			
+		}
+		.toushi-oo{
+			width: 100px;
+			height: 100px;
+			background: red;
+			transition: all .3s;
+			
+		}
+	</style>
+</html>

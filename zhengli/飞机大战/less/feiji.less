@@ -1,0 +1,71 @@
+
+#content{
+    width: 320px;
+    height: 568px;
+    margin: 0 auto;
+    background:lightblue;
+    position: relative;
+}
+.box-style{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.button-style{
+    width:150px;
+    height:30px;
+    border:1px solid black;
+    border-radius:30px;
+    // display:block;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+}
+#start{
+    // display:none;
+    .box-style;
+    background:url("../img/background-start.png") no-repeat;
+    button{
+        .button-style;
+    }
+}
+#main{
+    display: none;
+    .box-style;
+    background:url("../img/background-game.png");
+    #score{
+        position: absolute;
+        top:10px;
+        left: 10px;
+    }
+    button{
+        //  display: none;
+        z-index: 99999;
+        .button-style;
+                top: 50%;
+    }
+    button:first-of-type{
+        margin-top:-40px;
+    }
+    img {
+        position: absolute;
+    }
+}
+#settlement{
+    display: none;
+    .box-style;
+    // background:url("../img/background-game.png");
+    text-align: center;
+    p:first-of-type{
+        margin-top:200px;
+    }
+    button{
+        .button-style;
+        top:50%;
+
+    }
+}

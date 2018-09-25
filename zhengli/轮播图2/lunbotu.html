@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <div id="tu">
+            <img src="images/2 (1).jpg" alt="">
+            <img src="images/2 (2).jpg" alt="">
+            <img src="images/2 (3).jpg" alt="">
+            <img src="images/2 (4).jpg" alt="">
+        </div>
+        <div class="an">
+            <span id="left">left</span>
+            <span id="right">right</span>   
+        </div>
+        <div id="dian">
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+			</div>
+    </div>
+    <style>
+          .box{
+              position: relative;
+            width: 500px;
+            margin:0 auto;
+          }
+          .box #tu {
+              width: 500px;
+              position:relative;
+              /* background-color: brown; */
+          }
+          .box #tu img:first-child{
+              position: relative;
+              opacity: 1;
+          }
+        .box #tu img{
+            /* display: block; */
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            top:0;
+            left:0;
+            vertical-align:middle;
+            opacity: 0;
+            transition: all .8s;
+        }
+        .an span:first-of-type{
+            float: left;
+            position: absolute;
+            top:45%;
+            left: -50px;
+        }
+        .an span:nth-of-type(2){
+            float: right;
+            position: absolute;
+            top:45%;
+            right: -50px;
+        }
+        .an span{
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            display: inline-block;
+            background-color: lightblue;
+        }
+        .box #dian{
+           margin: 0 auto;
+           width: 140px;
+        }
+        .box #dian i{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: gray;
+            text-align: center;
+            line-height:30px;
+        }
+    </style>
+    <script>
+        var right=document.getElementById("right");
+        var left=document.getElementById("left");
+        var tu=document.getElementById("tu");
+        var dian=document.getElementById("dian");
+         var count=0;
+         var imgs = tu.getElementsByTagName('img');
+         var dians = dian.getElementsByTagName('i');
+         var intImgs=function(){
+            for(var i=0;i<imgs.length;i++){
+                imgs[i].style.opacity='0';
+            } 
+         }
+         
+         right.onclick=function(){
+            count++;
+             if(count>imgs.length -1){
+                count=0;
+            }
+           intImgs();
+            imgs[count].style.opacity='1';
+            bian();
+            dians[count].style.background='black';
+            console.log(count);
+        }
+        left.onclick=function(){
+            count--;
+             if(count<0){
+                count=imgs.length -1;
+            }
+            intImgs();
+            imgs[count].style.opacity='1';
+            bian();
+            dians[count].style.background='black';
+           
+            console.log(count);
+        }
+        var bian=function(){
+            for(var i=0;i<dians.length;i++){
+                dians[i].style.background='gray';
+            }  
+        }
+
+        for (var h = 0; h < dians.length; h++) {
+				dians[h].index = h;
+			}
+
+        for (var j = 0; j < dians.length; j++) {
+           
+            dians[j].onclick=function(){
+                 bian();
+                 count=this.index;
+                this.style.background='black';
+                intImgs();
+                imgs[count].style.opacity = '1';
+                console.log(count);
+            }
+        }
+
+
+    </script>
+</body>
+</html>
