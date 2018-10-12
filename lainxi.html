@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 </head>
 
 <body>
@@ -17,8 +18,15 @@
             margin-left: -55px;
             
         }
+        td{
+            text-align: center;
+        }
+        .background{
+            background-color:yellow ;
+        }
     </style>
     <table border="1" rules="all">
+            <caption>员工信息</caption>
         <tr bgcolor="#cccccc">
             <th></th>
             <th>名字</th>
@@ -26,35 +34,39 @@
             <th>年龄</th>
         </tr>
         <tr bgcolor="lightblue">
-            <th> <input type="checkbox" name="vehicle" value="Bike"></th>
-            <th>张三</th>
-            <th>20000</th>
-            <th>23</th>
+            <th> <input type="checkbox" name="vehicle" value="Bike" onchange="ta(event)"></th>
+            <td>张三</td>
+            <td>20000</td>
+            <td>23</td>
         </tr>
         <tr bgcolor="lightyellow">
-            <th><input type="checkbox" name="vehicle" value="Bike"></th>
-            <th>李四</th>
-            <th>22000</th>
-            <th>22</th>
+            <th><input type="checkbox" name="vehicle" value="Bike" onchange="ta(event)"></th>
+            <td>李四</td>
+            <td>22000</td>
+            <td>22</td>
         </tr>
         <tr bgcolor="lightblue">
-            <th><input type="checkbox" name="vehicle" value="Bike"></th>
-            <th>王五</th>
-            <th>14000</th>
-            <th>26</th>
+            <th><input type="checkbox" name="vehicle" value="Bike" onchange="ta(event)"></th>
+            <td>王五</td>
+            <td>14000</td>
+            <td>26</td>
         </tr>
-        <tr bgcolor="lightyellow">
-            <th><input type="checkbox" name="vehicle" value="Bike" ></td>
-            <th>马六</th>
-            <th>16000</th>
-            <th>21</th>
+        <tr bgcolor="lightyellow" id="ha">
+            <td><input type="checkbox" name="vehicle" value="Bike" onchange="ta(event)"></td>
+            <td>马六</td>
+            <td>16000</td>
+            <td>21</td>
         </tr>
     </table>
 </body>
 <script>
-    var bian=function(){
-         $('tr').css('background-color','yellow');
+    function ta(event) {
+        var origin=event.target;
+        console.log( origin);
+    var xuan= $(origin).parents('tr');
+    console.log(xuan)
+           $(xuan).toggleClass('background');
     }
-   
 </script>
+
 </html>
