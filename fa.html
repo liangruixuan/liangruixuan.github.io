@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+</head>
+
+<body>
+    <div class="bigcard">
+        <div class="small">
+            <img src="img/tu.png" alt="">
+            <div class="tool"></div>
+        </div>
+        <div class="big">
+            <img src="img/tu.png" alt="">
+        </div>
+    </div>
+    <style>
+        .bigcard{
+            width: 700px;
+            height: 700px;
+            margin: 100px auto;
+        }
+        .tool {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.5)
+        }
+
+        .small {
+            position: relative;
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin: 0 20px;
+        }
+
+        .small img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .big {
+            display: none;
+            float: left;
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .big img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 800px;
+            height: 800px;
+        }
+    </style>
+    <script>
+        $(".small").mousemove(function (ev) {
+            $('.tool').css('display','block')
+            $('.big').css('display', 'block')
+            var left = ev.pageX - $('.small').offset().left;
+            var top = ev.pageY - $('.small').offset().top;
+            var twidth = $('.tool').width() / 2;
+            var theight = $('.tool').height() / 2;
+            if (left < twidth) {
+                left = twidth;
+            }
+            if (left > ($(this).width() - twidth)) {
+                left = ($(this).width() - twidth);
+            }
+            if (top < theight) {
+                top = theight;
+            }
+            if (top > ($(this).height() - theight)) {
+                top = ($(this).height() - theight);
+            }
+            $('.tool').css({
+                top: top - 50,
+                left: left - 50
+            })
+            $('.big img').css({
+                top: -(top - 50) *4,
+                left: -(left - 50) *4
+            });
+            console.log(left);
+            console.log(twidth);
+        })
+        $(".small").mouseleave(function (ev) {
+            $('.big').css('display', 'none')
+            $('.tool').css('display','none')
+        })
+    </script>
+</body>
+
+</html>
