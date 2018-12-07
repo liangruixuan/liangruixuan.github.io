@@ -1,0 +1,54 @@
+.box{
+    text-align: center;
+}
+.box .line{
+    margin-top: 10px;
+}
+.box .item{
+display: inline-block;
+border: 1px solid #cdcdcd;
+padding: 10px;
+margin: 0 5px;
+}
+.box .item p{
+    color: #e33333;
+    font-weight: bold;
+}
+.box .item img{
+    display: block;
+    width: 228px;
+    height: 228px;
+}
+.box .item button{
+    padding: 8px;
+    display: block;
+    margin: 0 auto;
+    background: #e33333;
+    color:white;
+}
+.shopcar{
+    background: #e33333;
+    width:28px;
+    
+    color: white;
+    position: fixed;
+    right: 0;
+    top: 300px;
+    padding: 8px;
+}
+.shopcar button{
+    width: 30px;
+    font-size: 15px;
+    background: #e33333;
+    color: white;
+   
+}
+.shopcar span{
+    position: absolute;
+    top:-8px;
+    left: -8px;
+    width: 23px;
+    height: 23px;
+    background: palevioletred;
+    border-radius: 50%;
+}
