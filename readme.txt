@@ -1,11 +1,12 @@
 Git is a version control system.
 Git is free software.
 
-
-3d动画1：https://liangruixuan.github.io/zhengli/3d%E5%8A%A8%E7%94%BB/lainxi1.html
-3d动画2：https://liangruixuan.github.io/zhengli/3d%E5%8A%A8%E7%94%BB/lianxi2.html
+快递查询：https://liangruixuan.github.io/zhengli/%E5%BF%AB%E9%80%92%E6%9F%A5%E8%AF%A2/dist/index.html#/
+3d动画1：https://liangruixuan.github.io/zhengli/3d%E5%8A%A8%E7%94%BB/lianxi2.html
+3d动画2：https://liangruixuan.github.io/zhengli/3d%E5%8A%A8%E7%94%BB/lainxi1.html
 3d动画3：https://liangruixuan.github.io/zhengli/3d%E5%8A%A8%E7%94%BB/xiance.html
 3d动画4：https://liangruixuan.github.io/zhengli/3d%E5%8A%A8%E7%94%BB/3d%E5%8A%A8%E7%94%BB/xuance.html
+购物车飞入效果：https://liangruixuan.github.io/zhengli/%E8%B4%AD%E7%89%A9%E8%BD%A6%E9%A3%9E%E5%85%A5%E6%95%88%E6%9E%9C/gouwu.html#/
 js按钮动画：https://liangruixuan.github.io/zhengli/js%E6%8C%89%E9%92%AE%E5%8A%A8%E7%94%BB/move-buttom.1.html
 js点击选项卡：https://liangruixuan.github.io/zhengli/js%E7%82%B9%E5%87%BB%E9%80%89%E9%A1%B9%E5%8D%A1/jquery-card.html
 svg动画：https://liangruixuan.github.io/zhengli/svg%E5%8A%A8%E7%94%BB/svg
