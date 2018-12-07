@@ -3,6 +3,7 @@ Git is free software.
 
 快递查询：https://liangruixuan.github.io/zhengli/%E5%BF%AB%E9%80%92%E6%9F%A5%E8%AF%A2/dist/index.html#/
 3d动画1：https://liangruixuan.github.io/zhengli/3d%E5%8A%A8%E7%94%BB/lianxi2.html
+3d动画2：https://liangruixuan.github.io/zhengli/3d%E5%8A%A8%E7%94%BB/liu.html#/
 3d动画2：https://liangruixuan.github.io/zhengli/3d%E5%8A%A8%E7%94%BB/lainxi1.html
 3d动画3：https://liangruixuan.github.io/zhengli/3d%E5%8A%A8%E7%94%BB/xiance.html
 3d动画4：https://liangruixuan.github.io/zhengli/3d%E5%8A%A8%E7%94%BB/3d%E5%8A%A8%E7%94%BB/xuance.html
